@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class ListViewModel {
     
-    private var service: MovieServiceProtocol
+    private let service: MovieServiceProtocol
+    
+    let movies = BehaviorRelay<[MovieCellViewModel]>(value: [])
     
     init(service: MovieServiceProtocol) {
         self.service = service
@@ -21,7 +25,9 @@ extension ListViewModel {
     
     func fetchList() {
         self.service.fetchList { movies in
-            
+            if let movies = movies {
+                self.movies.accept(movies.map(MovieCellViewModel.init))
+            }
         }
     }
     

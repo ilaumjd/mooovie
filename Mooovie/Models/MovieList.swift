@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - Movie List
 struct MovieList: Codable {
-    let page: Int
-    let results: [Movie]
-    let dates: MovieList_Dates
-    let totalPages, totalResults: Int
+    let page: Int?
+    let results: [Movie]?
+    let dates: MovieList_Dates?
+    let totalPages, totalResults: Int?
 
     enum CodingKeys: String, CodingKey {
         case page, results, dates
@@ -23,7 +23,7 @@ struct MovieList: Codable {
 
 // MARK: - Dates
 struct MovieList_Dates: Codable {
-    let maximum, minimum: String
+    let maximum, minimum: String?
 }
 
 enum MovieList_OriginalLanguage: String, Codable {

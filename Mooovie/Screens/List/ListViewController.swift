@@ -40,9 +40,8 @@ extension ListViewController {
     
     private func setupRxListMovie() {
         cvMovie.rx.setDelegate(self).disposed(by: disposeBag)
-        let listMovie = BehaviorRelay<[String]>(value: ["","","","","","",""])
-        listMovie.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
-            
+        vm.movies.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
+            cell.configure(vm: vm)
         }.disposed(by: disposeBag)
     }
     

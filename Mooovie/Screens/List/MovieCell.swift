@@ -27,3 +27,13 @@ class MovieCell: UICollectionViewCell {
     }
     
 }
+
+extension MovieCell {
+    
+    func configure(vm: MovieCellViewModel) {
+        lbTitle.text = vm.title
+        lbInfo.text = vm.releaseDate
+        lbVote.text = vm.vote
+    }
+    
+}
