@@ -29,7 +29,8 @@ extension MovieCell {
     
     private func setupIvPoster() {
         ivPoster.backgroundColor = .prussianBlue
-        ivPoster.layer.cornerRadius = 6
+        ivPoster.layer.cornerRadius = 10
+        ivPoster.layer.masksToBounds = true
         
         ivPoster.translatesAutoresizingMaskIntoConstraints = false
         ivPoster.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true

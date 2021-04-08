@@ -31,6 +31,7 @@ class MovieCell: UICollectionViewCell {
 extension MovieCell {
     
     func configure(vm: MovieCellViewModel) {
+        ivPoster.from(vm.poster)
         lbTitle.text = vm.title
         lbInfo.text = vm.releaseDate
         lbVote.text = vm.vote
