@@ -23,31 +23,25 @@ extension ListViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Mooovie"
-        self.view.backgroundColor = .white
+        setupUI()
+        setupRxListMovie()
         
-        cvMovie.backgroundColor = .clear
-        cvMovie.showsVerticalScrollIndicator = false
-        cvMovie.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
-        
-        view.addSubview(cvMovie)
-        cvMovie.translatesAutoresizingMaskIntoConstraints = false
-        cvMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        cvMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        cvMovie.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        cvMovie.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        self.vm.fetchList()
+    }
 
+}
+
+// MARK: MEMBER
+extension ListViewController {
+    
+    private func setupRxListMovie() {
         cvMovie.rx.setDelegate(self).disposed(by: disposeBag)
         let listMovie = BehaviorRelay<[String]>(value: ["","","","","","",""])
         listMovie.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
             
         }.disposed(by: disposeBag)
-        
-        self.vm.fetchList()
     }
-
-
+    
 }
 
 // MARK: COLLECTION VIEW
