@@ -17,9 +17,13 @@
 		D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */; };
 		D9D6C8F0261EA82900B4D4ED /* MovieServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8EF261EA82900B4D4ED /* MovieServiceProtocol.swift */; };
 		D9D6C8F4261EA83300B4D4ED /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8F3261EA83300B4D4ED /* MovieService.swift */; };
+		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.debug.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.debug.xcconfig"; sourceTree = "<group>"; };
+		AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.release.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.release.xcconfig"; sourceTree = "<group>"; };
 		D9D6C8C6261E86FB00B4D4ED /* Mooovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D6C8C9261E86FB00B4D4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D6C8CB261E86FB00B4D4ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19538BDF1B66EB9AD6049CD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FC7E20E4A0DE75A9CA00DFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */,
+				AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D9D6C8BD261E86FB00B4D4ED = {
 			isa = PBXGroup;
 			children = (
 				D9D6C8C8261E86FB00B4D4ED /* Mooovie */,
 				D9D6C8C7261E86FB00B4D4ED /* Products */,
+				5FC7E20E4A0DE75A9CA00DFE /* Pods */,
+				19538BDF1B66EB9AD6049CD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9D6C8DA261E86FF00B4D4ED /* Build configuration list for PBXNativeTarget "Mooovie" */;
 			buildPhases = (
+				34277E9C3239687F28E5FD83 /* [CP] Check Pods Manifest.lock */,
 				D9D6C8C2261E86FB00B4D4ED /* Sources */,
 				D9D6C8C3261E86FB00B4D4ED /* Frameworks */,
 				D9D6C8C4261E86FB00B4D4ED /* Resources */,
@@ -174,6 +200,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34277E9C3239687F28E5FD83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mooovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9D6C8C2261E86FB00B4D4ED /* Sources */ = {
@@ -323,6 +374,7 @@
 		};
 		D9D6C8DB261E86FF00B4D4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +394,7 @@
 		};
 		D9D6C8DC261E86FF00B4D4ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
