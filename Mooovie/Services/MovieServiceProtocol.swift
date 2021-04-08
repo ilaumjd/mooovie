@@ -9,6 +9,6 @@ import Foundation
 
 protocol MovieServiceProtocol {
     
-    func fetchList(completion: @escaping (() -> ()))
+    func fetchList(completion: @escaping (([Movie]?) -> ()))
     
 }

@@ -18,6 +18,8 @@
 		D9D6C8F0261EA82900B4D4ED /* MovieServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8EF261EA82900B4D4ED /* MovieServiceProtocol.swift */; };
 		D9D6C8F4261EA83300B4D4ED /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8F3261EA83300B4D4ED /* MovieService.swift */; };
 		D9D6C8FF261EB01300B4D4ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8FE261EB01300B4D4ED /* Constants.swift */; };
+		D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C901261EB5A200B4D4ED /* Movie.swift */; };
+		D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C904261EBA8200B4D4ED /* MovieList.swift */; };
 		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		D9D6C8EF261EA82900B4D4ED /* MovieServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceProtocol.swift; sourceTree = "<group>"; };
 		D9D6C8F3261EA83300B4D4ED /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		D9D6C8FE261EB01300B4D4ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9D6C901261EB5A200B4D4ED /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D9D6C904261EBA8200B4D4ED /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			children = (
 				D9D6C8CD261E86FB00B4D4ED /* ListViewController.swift */,
 				D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */,
+				D9D6C901261EB5A200B4D4ED /* Movie.swift */,
+				D9D6C904261EBA8200B4D4ED /* MovieList.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -255,6 +261,8 @@
 				D9D6C8E5261E902600B4D4ED /* UIFont+Ext.swift in Sources */,
 				D9D6C8E9261EA5BA00B4D4ED /* UINavigationController+Ext.swift in Sources */,
 				D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */,
+				D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */,
+				D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */,
 				D9D6C8CE261E86FB00B4D4ED /* ListViewController.swift in Sources */,
 				D9D6C8CA261E86FB00B4D4ED /* AppDelegate.swift in Sources */,
 				D9D6C8F4261EA83300B4D4ED /* MovieService.swift in Sources */,
