@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ListViewController: UIViewController {
     
     private let vm = ListViewModel(service: MovieService())
+    private let disposeBag = DisposeBag()
     
     var cvMovie = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
@@ -24,11 +27,9 @@ extension ListViewController {
         self.title = "Mooovie"
         self.view.backgroundColor = .white
         
-//
-//            let layout = UICollectionViewFlowLayout()
-//            layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 40, right: 20)
-//        layout.scrollDirection = .vertical
-//            cvMovie = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        cvMovie.backgroundColor = .green
+        cvMovie.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
         
         view.addSubview(cvMovie)
         cvMovie.translatesAutoresizingMaskIntoConstraints = false
@@ -36,8 +37,12 @@ extension ListViewController {
         cvMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         cvMovie.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         cvMovie.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-        cvMovie.backgroundColor = .green
+
+        cvMovie.rx.setDelegate(self).disposed(by: disposeBag)
+        let listMovie = BehaviorRelay<[String]>(value: ["","","",""])
+        listMovie.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
+            
+        }.disposed(by: disposeBag)
         
         self.vm.fetchList()
     }
@@ -45,3 +50,11 @@ extension ListViewController {
 
 }
 
+// MARK: COLLECTION VIEW
+extension ListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 20)
+    }
+    
+}

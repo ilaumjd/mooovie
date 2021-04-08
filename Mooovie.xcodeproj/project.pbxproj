@@ -20,6 +20,7 @@
 		D9D6C8FF261EB01300B4D4ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8FE261EB01300B4D4ED /* Constants.swift */; };
 		D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C901261EB5A200B4D4ED /* Movie.swift */; };
 		D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C904261EBA8200B4D4ED /* MovieList.swift */; };
+		D9D6C908261EBCDE00B4D4ED /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C907261EBCDE00B4D4ED /* MovieCell.swift */; };
 		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		D9D6C8FE261EB01300B4D4ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D9D6C901261EB5A200B4D4ED /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D9D6C904261EBA8200B4D4ED /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		D9D6C907261EBCDE00B4D4ED /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */,
 				D9D6C901261EB5A200B4D4ED /* Movie.swift */,
 				D9D6C904261EBA8200B4D4ED /* MovieList.swift */,
+				D9D6C907261EBCDE00B4D4ED /* MovieCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				D9D6C8F0261EA82900B4D4ED /* MovieServiceProtocol.swift in Sources */,
 				D9D6C8E5261E902600B4D4ED /* UIFont+Ext.swift in Sources */,
+				D9D6C908261EBCDE00B4D4ED /* MovieCell.swift in Sources */,
 				D9D6C8E9261EA5BA00B4D4ED /* UINavigationController+Ext.swift in Sources */,
 				D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */,
 				D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */,
