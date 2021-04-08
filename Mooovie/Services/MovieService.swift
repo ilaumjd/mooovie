@@ -22,4 +22,17 @@ class MovieService: MovieServiceProtocol {
         }
     }
     
+    func fetchMovieDetail(movieId: Int, completion: @escaping ((Movie?) -> ())) {
+        AF.request("\(Constants.API.baseURL)/movie/\(movieId)?api_key=\(Constants.API.key)&language=en-US&page=1").responseDecodable(of: Movie.self) { response in
+            debugPrint(response)
+            switch response.result {
+            case .success(let movie):
+                completion(movie)
+            case .failure(let error):
+                debugPrint(error)
+                completion(nil)
+            }
+        }
+    }
+    
 }
