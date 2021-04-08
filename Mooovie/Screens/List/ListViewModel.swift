@@ -20,7 +20,9 @@ class ListViewModel {
 extension ListViewModel {
     
     func fetchList() {
-        
+        self.service.fetchList {
+            
+        }
     }
     
 }

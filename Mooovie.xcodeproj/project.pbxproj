@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */; };
 		D9D6C8F0261EA82900B4D4ED /* MovieServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8EF261EA82900B4D4ED /* MovieServiceProtocol.swift */; };
 		D9D6C8F4261EA83300B4D4ED /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8F3261EA83300B4D4ED /* MovieService.swift */; };
+		D9D6C8FF261EB01300B4D4ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8FE261EB01300B4D4ED /* Constants.swift */; };
 		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D9D6C8EF261EA82900B4D4ED /* MovieServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceProtocol.swift; sourceTree = "<group>"; };
 		D9D6C8F3261EA83300B4D4ED /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		D9D6C8FE261EB01300B4D4ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 				7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */,
 				AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +98,7 @@
 				D9D6C8D2261E86FF00B4D4ED /* Assets.xcassets */,
 				D9D6C8D4261E86FF00B4D4ED /* LaunchScreen.storyboard */,
 				D9D6C8D7261E86FF00B4D4ED /* Info.plist */,
+				D9D6C8FE261EB01300B4D4ED /* Constants.swift */,
 			);
 			path = Mooovie;
 			sourceTree = "<group>";
@@ -257,6 +259,7 @@
 				D9D6C8CA261E86FB00B4D4ED /* AppDelegate.swift in Sources */,
 				D9D6C8F4261EA83300B4D4ED /* MovieService.swift in Sources */,
 				D9D6C8CC261E86FB00B4D4ED /* SceneDelegate.swift in Sources */,
+				D9D6C8FF261EB01300B4D4ED /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
