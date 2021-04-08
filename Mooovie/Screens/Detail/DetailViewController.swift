@@ -9,6 +9,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    static func create(movieId: Int?) -> DetailViewController {
+        let vc = DetailViewController()
+        return vc
+    }
+    
 }
 
 // MARK: LIFECYCLE
@@ -16,6 +21,7 @@ extension DetailViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
 }

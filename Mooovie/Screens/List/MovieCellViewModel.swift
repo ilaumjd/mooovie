@@ -13,6 +13,10 @@ struct MovieCellViewModel {
 
 extension MovieCellViewModel {
     
+    var id: Int {
+        model.id ?? 0
+    }
+    
     var title: String {
         model.title ?? ""
     }

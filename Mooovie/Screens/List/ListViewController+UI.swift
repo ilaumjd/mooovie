@@ -5,9 +5,13 @@
 //  Created by aku pintar indonesia on 08/04/21.
 //
 
-import Foundation
+import UIKit
 
 extension ListViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     
     func setupUI() {
         self.title = "Mooovie"

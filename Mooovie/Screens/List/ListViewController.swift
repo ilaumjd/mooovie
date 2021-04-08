@@ -28,10 +28,6 @@ extension ListViewController {
         
         self.vm.fetchList()
     }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
 
 }
 
@@ -42,7 +38,7 @@ extension ListViewController {
         cvMovie.rx.setDelegate(self).disposed(by: disposeBag)
         cvMovie.rx.itemSelected
             .subscribe(onNext: { [weak self] indexPath in
-                let vc = DetailViewController()
+                let vc = DetailViewController.create(movieId: self?.vm.movies.value[indexPath.row].id)
                 self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         vm.movies.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
