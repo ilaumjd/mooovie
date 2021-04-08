@@ -40,6 +40,11 @@ extension ListViewController {
     
     private func setupRxListMovie() {
         cvMovie.rx.setDelegate(self).disposed(by: disposeBag)
+        cvMovie.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                let vc = DetailViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: disposeBag)
         vm.movies.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
             cell.configure(vm: vm)
         }.disposed(by: disposeBag)
