@@ -24,6 +24,7 @@
 		D9D6C90B261EC4EE00B4D4ED /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C90A261EC4EE00B4D4ED /* UIColor+Ext.swift */; };
 		D9D6C90E261EDF3E00B4D4ED /* MovieCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C90D261EDF3E00B4D4ED /* MovieCell+UI.swift */; };
 		D9D6C911261EDF6200B4D4ED /* ListViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C910261EDF6200B4D4ED /* ListViewController+UI.swift */; };
+		D9D6C917261F593A00B4D4ED /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C916261F593A00B4D4ED /* MooovieNavigationController.swift */; };
 		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		D9D6C90A261EC4EE00B4D4ED /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		D9D6C90D261EDF3E00B4D4ED /* MovieCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieCell+UI.swift"; sourceTree = "<group>"; };
 		D9D6C910261EDF6200B4D4ED /* ListViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UI.swift"; sourceTree = "<group>"; };
+		D9D6C916261F593A00B4D4ED /* MooovieNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		D9D6C8C8261E86FB00B4D4ED /* Mooovie */ = {
 			isa = PBXGroup;
 			children = (
+				D9D6C919261F59A300B4D4ED /* Custom Views */,
 				D9D6C914261EE0F100B4D4ED /* Models */,
 				D9D6C8EE261EA80300B4D4ED /* Services */,
 				D9D6C8E3261E900E00B4D4ED /* Extensions */,
@@ -162,6 +165,14 @@
 				D9D6C904261EBA8200B4D4ED /* MovieList.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D9D6C919261F59A300B4D4ED /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9D6C916261F593A00B4D4ED /* MooovieNavigationController.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 				D9D6C8E9261EA5BA00B4D4ED /* UINavigationController+Ext.swift in Sources */,
 				D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */,
 				D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */,
+				D9D6C917261F593A00B4D4ED /* MooovieNavigationController.swift in Sources */,
 				D9D6C90B261EC4EE00B4D4ED /* UIColor+Ext.swift in Sources */,
 				D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */,
 				D9D6C8CE261E86FB00B4D4ED /* ListViewController.swift in Sources */,
