@@ -6,5 +6,9 @@ target 'Mooovie' do
   use_frameworks!
 
   # Pods for Mooovie
+  pod 'Alamofire', '~> 5.2'
+  pod 'AlamofireImage', '~> 4.1'
+  pod 'RxSwift', '6.1.0'
+  pod 'RxCocoa', '6.1.0'
 
 end
