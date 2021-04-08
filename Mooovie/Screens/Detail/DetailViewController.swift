@@ -11,11 +11,18 @@ class DetailViewController: UIViewController {
     
     private let vm = DetailViewModel(service: MovieService())
     
-    var svSize = CGSize(width: UIScreen.main.bounds.width, height: 2000)
+    var scvSize = CGSize(width: UIScreen.main.bounds.width, height: 2000)
     
-    var svMovie = UIScrollView()
-    var vSvMovieContent = UIView()
+    var scv = UIScrollView()
+    var vScvContent = UIView()
     var ivPoster = UIImageView()
+    var stvHInfo = UIStackView()
+    var vVote = UIView()
+    var ivVote = UIImageView()
+    var lbVote = UILabel()
+    var lbVoteCount = UILabel()
+    var lbRuntime = UILabel()
+    var lbLanguage = UILabel()
     
     static func create(movieId: Int?) -> DetailViewController {
         let vc = DetailViewController()

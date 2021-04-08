@@ -14,28 +14,38 @@ extension DetailViewController {
     }
     
     func setupUI() {
-        view.addSubview(svMovie)
-        svMovie.addSubview(vSvMovieContent)
-        vSvMovieContent.addSubview(ivPoster)
+        view.addSubview(scv)
+        scv.addSubview(vScvContent)
+        vScvContent.addSubview(ivPoster)
+        vScvContent.addSubview(stvHInfo)
+        stvHInfo.addArrangedSubview(vVote)
+        vVote.addSubview(ivVote)
+        vVote.addSubview(lbVote)
+        stvHInfo.addArrangedSubview(lbRuntime)
+        stvHInfo.addArrangedSubview(lbLanguage)
         
         setupSvMovie()
         setupIvPoster()
+        setupStvHInfo()
+        setupVVote()
+        setupLbRuntime()
+        setupLbLanguage()
     }
     
     private func setupSvMovie() {
-        svMovie.frame = self.view.frame
-        svMovie.contentSize = svSize
-        svMovie.autoresizingMask = .flexibleWidth
-        svMovie.contentInsetAdjustmentBehavior = .never
+        scv.frame = self.view.frame
+        scv.contentSize = scvSize
+        scv.autoresizingMask = .flexibleWidth
+        scv.contentInsetAdjustmentBehavior = .never
         
-        vSvMovieContent.frame.size = svSize
-        vSvMovieContent.backgroundColor = .gray
+        vScvContent.frame.size = scvSize
+        vScvContent.backgroundColor = .gray
         
-        svMovie.translatesAutoresizingMaskIntoConstraints = false
-        svMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        svMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        svMovie.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        svMovie.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        scv.translatesAutoresizingMaskIntoConstraints = false
+        scv.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        scv.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        scv.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        scv.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     private func setupIvPoster() {
@@ -43,9 +53,32 @@ extension DetailViewController {
 
         ivPoster.translatesAutoresizingMaskIntoConstraints = false
         ivPoster.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        ivPoster.centerXAnchor.constraint(equalTo: vSvMovieContent.centerXAnchor).isActive = true
-        ivPoster.topAnchor.constraint(equalTo: vSvMovieContent.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        ivPoster.centerXAnchor.constraint(equalTo: vScvContent.centerXAnchor).isActive = true
+        ivPoster.topAnchor.constraint(equalTo: vScvContent.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         ivPoster.heightAnchor.constraint(equalToConstant: 300).isActive = true
     }
+    
+    private func setupStvHInfo() {
+        stvHInfo.distribution = .fillEqually
+        
+        stvHInfo.translatesAutoresizingMaskIntoConstraints = false
+        stvHInfo.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
+        stvHInfo.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
+        stvHInfo.topAnchor.constraint(equalTo: ivPoster.bottomAnchor, constant: 20).isActive = true
+        stvHInfo.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    
+    private func setupVVote() {
+        vVote.backgroundColor = .red
+    }
+    
+    private func setupLbRuntime() {
+        lbRuntime.backgroundColor = .green
+    }
+    
+    private func setupLbLanguage() {
+        lbLanguage.backgroundColor = .blue
+    }
+
     
 }
