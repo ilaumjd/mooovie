@@ -27,19 +27,19 @@ extension ListViewController {
         self.title = "Mooovie"
         self.view.backgroundColor = .white
         
-        
-        cvMovie.backgroundColor = .green
+        cvMovie.backgroundColor = .clear
+        cvMovie.showsVerticalScrollIndicator = false
         cvMovie.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
         
         view.addSubview(cvMovie)
         cvMovie.translatesAutoresizingMaskIntoConstraints = false
-        cvMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        cvMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        cvMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        cvMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         cvMovie.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         cvMovie.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
         cvMovie.rx.setDelegate(self).disposed(by: disposeBag)
-        let listMovie = BehaviorRelay<[String]>(value: ["","","",""])
+        let listMovie = BehaviorRelay<[String]>(value: ["","","","","","",""])
         listMovie.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
             
         }.disposed(by: disposeBag)
@@ -54,7 +54,7 @@ extension ListViewController {
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 20)
+        return CGSize(width: collectionView.frame.width, height: 150)
     }
     
 }
