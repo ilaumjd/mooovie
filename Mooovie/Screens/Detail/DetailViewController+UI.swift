@@ -21,6 +21,7 @@ extension DetailViewController {
         stvHInfo.addArrangedSubview(vVote)
         vVote.addSubview(ivVote)
         vVote.addSubview(lbVote)
+        vVote.addSubview(lbVoteCount)
         stvHInfo.addArrangedSubview(lbRuntime)
         stvHInfo.addArrangedSubview(lbLanguage)
         
@@ -28,6 +29,9 @@ extension DetailViewController {
         setupIvPoster()
         setupStvHInfo()
         setupVVote()
+        setupIvVote()
+        setupLbVote()
+        setupLbVoteCount()
         setupLbRuntime()
         setupLbLanguage()
     }
@@ -65,11 +69,45 @@ extension DetailViewController {
         stvHInfo.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
         stvHInfo.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
         stvHInfo.topAnchor.constraint(equalTo: ivPoster.bottomAnchor, constant: 20).isActive = true
-        stvHInfo.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        stvHInfo.heightAnchor.constraint(equalToConstant: 80).isActive = true
     }
     
     private func setupVVote() {
         vVote.backgroundColor = .red
+        
+    }
+    
+    private func setupIvVote() {
+        ivVote.image = UIImage(systemName: "star.fill")
+        ivVote.tintColor = .maximumYellow
+        
+        ivVote.translatesAutoresizingMaskIntoConstraints = false
+        ivVote.centerXAnchor.constraint(equalTo: vVote.centerXAnchor).isActive = true
+        ivVote.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        ivVote.topAnchor.constraint(equalTo: vVote.topAnchor, constant: 12).isActive = true
+        ivVote.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    
+    private func setupLbVote() {
+        lbVote.text = "6.5"
+        lbVote.font = .rounded(ofSize: 20, weight: .bold)
+        lbVote.textColor = .prussianBlue
+        
+        lbVote.translatesAutoresizingMaskIntoConstraints = false
+        lbVote.translatesAutoresizingMaskIntoConstraints = false
+        lbVote.centerXAnchor.constraint(equalTo: vVote.centerXAnchor).isActive = true
+        lbVote.topAnchor.constraint(equalTo: ivVote.bottomAnchor, constant: 0).isActive = true
+    }
+    
+    private func setupLbVoteCount() {
+        lbVoteCount.text = "3917 votes"
+        lbVoteCount.font = .rounded(ofSize: 10, weight: .regular)
+        lbVoteCount.textColor = .prussianBlue
+        
+        lbVoteCount.translatesAutoresizingMaskIntoConstraints = false
+        lbVoteCount.translatesAutoresizingMaskIntoConstraints = false
+        lbVoteCount.centerXAnchor.constraint(equalTo: vVote.centerXAnchor).isActive = true
+        lbVoteCount.topAnchor.constraint(equalTo: lbVote.bottomAnchor, constant: 0).isActive = true
     }
     
     private func setupLbRuntime() {
