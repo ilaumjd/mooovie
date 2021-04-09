@@ -16,7 +16,7 @@ extension ListViewController {
     func setupUI() {
         self.title = "Mooovie"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .pureWhite
         
         view.addSubview(cvMovie)
         

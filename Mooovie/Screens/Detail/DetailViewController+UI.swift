@@ -14,6 +14,8 @@ extension DetailViewController {
     }
     
     func setupUI() {
+        view.backgroundColor = .pureWhite
+        
         view.addSubview(scv)
         scv.addSubview(vScvContent)
         vScvContent.addSubview(ivPoster)
@@ -43,7 +45,7 @@ extension DetailViewController {
         scv.contentInsetAdjustmentBehavior = .never
         
         vScvContent.frame.size = scvSize
-        vScvContent.backgroundColor = .gray
+        vScvContent.backgroundColor = .clear
         
         scv.translatesAutoresizingMaskIntoConstraints = false
         scv.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
