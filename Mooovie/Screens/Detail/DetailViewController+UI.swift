@@ -33,6 +33,7 @@ extension DetailViewController {
         setupLbLanguage()
         setupIvWebsite()
         setupLbWebsite()
+        setupLbInfo()
         setupLbOverview()
     }
     
@@ -57,6 +58,7 @@ extension DetailViewController {
         stvHInfo.addArrangedSubview(btWebsite)
         btWebsite.addSubview(ivWebsite)
         btWebsite.addSubview(lbWebsite)
+        vScvContent.addSubview(lbInfo)
         vScvContent.addSubview(lbOverview)
     }
     
@@ -232,6 +234,17 @@ extension DetailViewController {
         lbWebsite.topAnchor.constraint(equalTo: ivWebsite.bottomAnchor).isActive = true
     }
     
+    private func setupLbInfo() {
+        lbInfo.font = .rounded(ofSize: 12, weight: .regular)
+        lbInfo.textColor = .prussianBlue
+        lbInfo.numberOfLines = 0
+        
+        lbInfo.translatesAutoresizingMaskIntoConstraints = false
+        lbInfo.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor, constant: 20).isActive = true
+        lbInfo.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor, constant: -20).isActive = true
+        lbInfo.topAnchor.constraint(equalTo: stvHInfo.bottomAnchor, constant: 20).isActive = true
+    }
+    
     private func setupLbOverview() {
         lbOverview.font = .rounded(ofSize: 12, weight: .regular)
         lbOverview.textColor = .prussianBlue
@@ -240,7 +253,7 @@ extension DetailViewController {
         lbOverview.translatesAutoresizingMaskIntoConstraints = false
         lbOverview.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor, constant: 20).isActive = true
         lbOverview.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor, constant: -20).isActive = true
-        lbOverview.topAnchor.constraint(equalTo: stvHInfo.bottomAnchor, constant: 20).isActive = true
+        lbOverview.topAnchor.constraint(equalTo: lbInfo.bottomAnchor, constant: 10).isActive = true
     }
 
     

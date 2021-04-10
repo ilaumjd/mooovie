@@ -15,8 +15,7 @@ class MovieService: MovieServiceProtocol {
             switch response.result {
             case .success(let movieList):
                 completion(movieList.results)
-            case .failure(let error):
-                debugPrint(error)
+            case .failure(let _):
                 completion(nil)
             }
         }
@@ -28,8 +27,7 @@ class MovieService: MovieServiceProtocol {
             switch response.result {
             case .success(let movie):
                 completion(movie)
-            case .failure(let error):
-                debugPrint(error)
+            case .failure(let _):
                 completion(nil)
             }
         }

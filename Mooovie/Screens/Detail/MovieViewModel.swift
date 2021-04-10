@@ -61,4 +61,10 @@ extension MovieViewModel {
         model.homepage ?? ""
     }
     
+    var genres: String {
+        (model.genres ?? [])
+            .map { $0.name ?? "" }
+            .joined(separator: ", ")
+    }
+    
 }

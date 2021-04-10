@@ -35,6 +35,7 @@ class DetailViewController: UIViewController {
     var btWebsite = UIButton()
     var ivWebsite = UIImageView()
     var lbWebsite = UILabel()
+    var lbInfo = UILabel()
     var lbOverview = UILabel()
     
     static func create(movieId: Int?) -> DetailViewController {
@@ -84,6 +85,9 @@ extension DetailViewController {
                     self?.lbVoteCount.text = movie?.voteCount
                     self?.lbRuntime.text = movie?.runtime
                     self?.lbLanguage.text = " " + (movie?.language ?? "") + " "
+                    self?.lbInfo.text = "Release date: \(movie?.releaseDate ?? "")\n"
+                        + "Genres: \(movie?.genres ?? "")"
+                        
                     self?.lbOverview.text = movie?.overview
                 }
             }).disposed(by: disposeBag)
