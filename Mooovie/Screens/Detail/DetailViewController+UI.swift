@@ -22,6 +22,7 @@ extension DetailViewController {
         setupIvBackdrop()
         setupIvPoster()
         setupLbTitle()
+        setupLbTagline()
         setupStvHInfo()
         setupIvVote()
         setupLbVote()
@@ -30,6 +31,7 @@ extension DetailViewController {
         setupLbRuntime()
         setupLbMinutes()
         setupLbLanguage()
+        setupLbOverview()
     }
     
     private func addSubviews() {
@@ -105,13 +107,25 @@ extension DetailViewController {
         lbTitle.topAnchor.constraint(equalTo: ivPoster.bottomAnchor, constant: 20).isActive = true
     }
     
+    private func setupLbTagline() {
+        lbTagline.font = .italic(ofSize: 14, weight: .regular)
+        lbTagline.textColor = .prussianBlue
+        lbTagline.textAlignment = .center
+        lbTagline.numberOfLines = 0
+        
+        lbTagline.translatesAutoresizingMaskIntoConstraints = false
+        lbTagline.widthAnchor.constraint(equalTo: vScvContent.widthAnchor, constant: -40).isActive = true
+        lbTagline.centerXAnchor.constraint(equalTo: vScvContent.centerXAnchor).isActive = true
+        lbTagline.topAnchor.constraint(equalTo: lbTitle.bottomAnchor).isActive = true
+    }
+    
     private func setupStvHInfo() {
         stvHInfo.axis = .horizontal
         
         stvHInfo.translatesAutoresizingMaskIntoConstraints = false
         stvHInfo.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
         stvHInfo.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
-        stvHInfo.topAnchor.constraint(equalTo: ivPoster.bottomAnchor, constant: 50).isActive = true
+        stvHInfo.topAnchor.constraint(equalTo: lbTagline.bottomAnchor, constant: 20).isActive = true
         stvHInfo.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
         vRuntime.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
@@ -188,6 +202,10 @@ extension DetailViewController {
         lbLanguage.translatesAutoresizingMaskIntoConstraints = false
         lbLanguage.centerXAnchor.constraint(equalTo: vLanguage.centerXAnchor).isActive = true
         lbLanguage.centerYAnchor.constraint(equalTo: vLanguage.centerYAnchor).isActive = true
+    }
+    
+    private func setupLbOverview() {
+        
     }
 
     
