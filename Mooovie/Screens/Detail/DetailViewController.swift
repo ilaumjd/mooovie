@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
     var vScvContent = UIView()
     var ivBackdrop = UIImageView()
     var ivPoster = UIImageView()
+    var lbTitle = UILabel()
+    var lbTagline = UILabel()
     var stvHInfo = UIStackView()
     var vVote = UIView()
     var ivVote = UIImageView()
@@ -30,6 +32,7 @@ class DetailViewController: UIViewController {
     var lbMinutes = UILabel()
     var vLanguage = UIView()
     var lbLanguage = UILabel()
+    var lbOverview = UILabel()
     
     static func create(movieId: Int?) -> DetailViewController {
         let vc = DetailViewController()
@@ -49,9 +52,8 @@ extension DetailViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.standardAppearance.backgroundColor = .clear
         super.viewWillAppear(animated)
-        
+        navigationController?.navigationBar.standardAppearance.backgroundColor = .clear
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,11 +72,14 @@ extension DetailViewController {
             .subscribe(onNext: { [weak self] movie in
                 DispatchQueue.main.async {
                     self?.ivPoster.from(movie.poster)
+                    self?.lbTitle.text = movie.title
+                    self?.lbTagline.text = movie.tagline
                     self?.ivBackdrop.from(movie.backdrop)
                     self?.lbVote.text = movie.vote
                     self?.lbVoteCount.text = movie.voteCount
                     self?.lbRuntime.text = movie.runtime
                     self?.lbLanguage.text = " " + movie.language + " "
+                    self?.lbOverview.text = movie.overview
                 }
             }).disposed(by: disposeBag)
         

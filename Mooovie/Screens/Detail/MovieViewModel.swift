@@ -21,6 +21,10 @@ extension MovieViewModel {
         model.title ?? ""
     }
     
+    var tagline: String {
+        model.tagline ?? ""
+    }
+    
     var releaseDate: String {
         model.releaseDate ?? ""
     }
@@ -50,6 +54,10 @@ extension MovieViewModel {
             return (languages.last?.iso639_1 ?? "").uppercased()
         }
         return ""
+    }
+    
+    var overview: String {
+        model.overview ?? ""
     }
     
 }

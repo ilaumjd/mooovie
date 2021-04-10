@@ -19,8 +19,9 @@ extension DetailViewController {
         addSubviews()
         
         setupSvMovie()
-        setupIvPoster()
         setupIvBackdrop()
+        setupIvPoster()
+        setupLbTitle()
         setupStvHInfo()
         setupIvVote()
         setupLbVote()
@@ -36,6 +37,8 @@ extension DetailViewController {
         scv.addSubview(vScvContent)
         vScvContent.addSubview(ivBackdrop)
         vScvContent.addSubview(ivPoster)
+        vScvContent.addSubview(lbTitle)
+        vScvContent.addSubview(lbTagline)
         vScvContent.addSubview(stvHInfo)
         stvHInfo.addArrangedSubview(vVote)
         vVote.addSubview(ivVote)
@@ -47,6 +50,7 @@ extension DetailViewController {
         vRuntime.addSubview(lbMinutes)
         stvHInfo.addArrangedSubview(vLanguage)
         vLanguage.addSubview(lbLanguage)
+        vScvContent.addSubview(lbOverview)
     }
     
     private func setupSvMovie() {
@@ -89,14 +93,25 @@ extension DetailViewController {
         ivPoster.heightAnchor.constraint(equalToConstant: 210).isActive = true
     }
     
+    private func setupLbTitle() {
+        lbTitle.font = .rounded(ofSize: 20, weight: .bold)
+        lbTitle.textColor = .prussianBlue
+        lbTitle.textAlignment = .center
+        lbTitle.numberOfLines = 0
+        
+        lbTitle.translatesAutoresizingMaskIntoConstraints = false
+        lbTitle.widthAnchor.constraint(equalTo: vScvContent.widthAnchor, constant: -40).isActive = true
+        lbTitle.centerXAnchor.constraint(equalTo: vScvContent.centerXAnchor).isActive = true
+        lbTitle.topAnchor.constraint(equalTo: ivPoster.bottomAnchor, constant: 20).isActive = true
+    }
+    
     private func setupStvHInfo() {
         stvHInfo.axis = .horizontal
-//        stvHInfo.alignment = .center
         
         stvHInfo.translatesAutoresizingMaskIntoConstraints = false
         stvHInfo.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
         stvHInfo.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
-        stvHInfo.topAnchor.constraint(equalTo: ivPoster.bottomAnchor, constant: 20).isActive = true
+        stvHInfo.topAnchor.constraint(equalTo: ivPoster.bottomAnchor, constant: 50).isActive = true
         stvHInfo.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
         vRuntime.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true

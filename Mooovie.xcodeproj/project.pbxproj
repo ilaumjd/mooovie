@@ -161,7 +161,6 @@
 				D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */,
 				D9D6C907261EBCDE00B4D4ED /* MovieCell.swift */,
 				D9D6C90D261EDF3E00B4D4ED /* MovieCell+UI.swift */,
-				D9D6C91C261F5A5E00B4D4ED /* MovieViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -211,6 +210,7 @@
 				D9D6C923261F610700B4D4ED /* DetailViewController.swift */,
 				D9D6C927261F629100B4D4ED /* DetailViewController+UI.swift */,
 				D9D6C92A261F629B00B4D4ED /* DetailViewModel.swift */,
+				D9D6C91C261F5A5E00B4D4ED /* MovieViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
