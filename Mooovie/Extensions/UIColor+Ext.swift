@@ -13,6 +13,10 @@ extension UIColor {
         return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
+    @nonobjc class var buttonDefault: UIColor {
+        return UIColor(red: 0.196, green: 0.3098, blue: 0.52, alpha: 1)
+    }
+    
     @nonobjc class var lemonMeringue: UIColor {
         return UIColor(named: "LemonMeringue") ?? .pureWhite
     }

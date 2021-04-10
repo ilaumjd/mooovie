@@ -31,6 +31,8 @@ extension DetailViewController {
         setupLbRuntime()
         setupLbMinutes()
         setupLbLanguage()
+        setupIvWebsite()
+        setupLbWebsite()
         setupLbOverview()
     }
     
@@ -52,6 +54,9 @@ extension DetailViewController {
         vRuntime.addSubview(lbMinutes)
         stvHInfo.addArrangedSubview(vLanguage)
         vLanguage.addSubview(lbLanguage)
+        stvHInfo.addArrangedSubview(btWebsite)
+        btWebsite.addSubview(ivWebsite)
+        btWebsite.addSubview(lbWebsite)
         vScvContent.addSubview(lbOverview)
     }
     
@@ -130,6 +135,7 @@ extension DetailViewController {
         
         vRuntime.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
         vLanguage.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
+        btWebsite.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
     }
     
     private func setupIvVote() {
@@ -202,6 +208,28 @@ extension DetailViewController {
         lbLanguage.translatesAutoresizingMaskIntoConstraints = false
         lbLanguage.centerXAnchor.constraint(equalTo: vLanguage.centerXAnchor).isActive = true
         lbLanguage.centerYAnchor.constraint(equalTo: vLanguage.centerYAnchor).isActive = true
+    }
+    
+    private func setupIvWebsite() {
+        ivWebsite.image = UIImage(systemName: "globe")
+        
+        ivWebsite.translatesAutoresizingMaskIntoConstraints = false
+        ivWebsite.centerXAnchor.constraint(equalTo: btWebsite.centerXAnchor).isActive = true
+        ivWebsite.centerYAnchor.constraint(equalTo: btWebsite.centerYAnchor, constant: -10).isActive = true
+        ivWebsite.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        ivWebsite.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    }
+    
+    private func setupLbWebsite() {
+        lbWebsite.text = "Visit\nwebsite"
+        lbWebsite.textAlignment = .center
+        lbWebsite.textColor = .systemBlue
+        lbWebsite.numberOfLines = 2
+        lbWebsite.font = .rounded(ofSize: 10, weight: .regular)
+        
+        lbWebsite.translatesAutoresizingMaskIntoConstraints = false
+        lbWebsite.centerXAnchor.constraint(equalTo: btWebsite.centerXAnchor).isActive = true
+        lbWebsite.topAnchor.constraint(equalTo: ivWebsite.bottomAnchor).isActive = true
     }
     
     private func setupLbOverview() {

@@ -32,6 +32,9 @@ class DetailViewController: UIViewController {
     var lbMinutes = UILabel()
     var vLanguage = UIView()
     var lbLanguage = UILabel()
+    var btWebsite = UIButton()
+    var ivWebsite = UIImageView()
+    var lbWebsite = UILabel()
     var lbOverview = UILabel()
     
     static func create(movieId: Int?) -> DetailViewController {
@@ -48,7 +51,9 @@ extension DetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupRx()
+        setupRxMovieDetail()
+        setupRxScrollNavbarTransparency()
+        setupRxWebsiteTap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +72,7 @@ extension DetailViewController {
 // MARK: MEMBER
 extension DetailViewController {
     
-    private func setupRx() {
+    private func setupRxMovieDetail() {
         vm.movie
             .subscribe(onNext: { [weak self] movie in
                 DispatchQueue.main.async {
@@ -82,13 +87,26 @@ extension DetailViewController {
                     self?.lbOverview.text = movie.overview
                 }
             }).disposed(by: disposeBag)
-        
+    }
+    
+    private func setupRxScrollNavbarTransparency() {
         scv.rx.didScroll
             .subscribe(onNext: { [weak self] in
                 let offset = self?.scv.contentOffset.y ?? 0
                 let alphaOffset = (self?.ivBackdrop.frame.maxY ?? 0)
                 let alpha = min(offset / alphaOffset, 1)
                 self?.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.maximumRed.withAlphaComponent(alpha)
+            }).disposed(by: disposeBag)
+    }
+    
+    private func setupRxWebsiteTap() {
+        btWebsite.rx.tap
+            .subscribe(onNext: {
+                self.btWebsite.alpha = 1
+            }).disposed(by: disposeBag)
+        btWebsite.rx.controlEvent(.touchDown)
+            .subscribe(onNext: {
+                self.btWebsite.alpha = 0.5
             }).disposed(by: disposeBag)
     }
     
