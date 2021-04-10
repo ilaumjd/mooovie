@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
     
     static func create(movieId: Int?) -> DetailViewController {
         let vc = DetailViewController()
-        vc.vm.movieId = movieId
+        vc.vm.movieId.onNext(movieId ?? 0)
         return vc
     }
     
@@ -40,8 +40,6 @@ extension DetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        vm.fetchDetail()
     }
     
     override func viewWillAppear(_ animated: Bool) {

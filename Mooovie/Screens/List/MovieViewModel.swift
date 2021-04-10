@@ -1,5 +1,5 @@
 //
-//  MovieCellViewModel.swift
+//  MovieViewModel.swift
 //  Mooovie
 //
 //  Created by aku pintar indonesia on 08/04/21.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct MovieCellViewModel {
+struct MovieViewModel {
     var model: Movie
 }
 
-extension MovieCellViewModel {
+extension MovieViewModel {
     
     var id: Int {
         model.id ?? 0
@@ -29,8 +29,24 @@ extension MovieCellViewModel {
         Constants.API.baseImageURL + (model.posterPath ?? "")
     }
     
+    var backdropURL: String {
+        ""
+    }
+    
     var vote: String {
         "\(model.voteAverage ?? 0)"
+    }
+    
+    var voteCount: String {
+        ""
+    }
+    
+    var duration: String {
+        ""
+    }
+    
+    var language: String {
+        ""
     }
     
 }

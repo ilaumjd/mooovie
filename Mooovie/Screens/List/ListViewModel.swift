@@ -13,7 +13,7 @@ class ListViewModel {
     
     private let service: MovieServiceProtocol
     
-    let movies = BehaviorRelay<[MovieCellViewModel]>(value: [])
+    let movies = BehaviorRelay<[MovieViewModel]>(value: [])
     
     init(service: MovieServiceProtocol) {
         self.service = service
@@ -26,7 +26,7 @@ extension ListViewModel {
     func fetchList() {
         self.service.fetchList { movies in
             if let movies = movies {
-                self.movies.accept(movies.map(MovieCellViewModel.init))
+                self.movies.accept(movies.map(MovieViewModel.init))
             }
         }
     }
