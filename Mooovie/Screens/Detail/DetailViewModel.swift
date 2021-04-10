@@ -21,7 +21,7 @@ class DetailViewModel {
         setupRx()
     }
     
-    func setupRx() {
+    private func setupRx() {
         self.movieId
             .subscribe(onNext: { [weak self] movieId in
                 self?.fetchDetail(movieId: movieId)

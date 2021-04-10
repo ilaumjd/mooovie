@@ -29,8 +29,8 @@ extension MovieViewModel {
         Constants.API.baseImageURL + (model.posterPath ?? "")
     }
     
-    var backdropURL: String {
-        ""
+    var backdrop: String {
+        Constants.API.baseImageURL + (model.backdropPath ?? "")
     }
     
     var vote: String {
@@ -38,15 +38,15 @@ extension MovieViewModel {
     }
     
     var voteCount: String {
-        ""
+        "\(model.voteCount ?? 0) votes"
     }
     
-    var duration: String {
-        ""
+    var runtime: String {
+        "\(model.runtime ?? 0)"
     }
     
     var language: String {
-        ""
+        model.spokenLanguages?[0].iso639_1 ?? ""
     }
     
 }
