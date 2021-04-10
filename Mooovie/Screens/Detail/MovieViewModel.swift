@@ -50,10 +50,7 @@ extension MovieViewModel {
     }
     
     var language: String {
-        if let languages = model.spokenLanguages {
-            return (languages.last?.iso639_1 ?? "").uppercased()
-        }
-        return ""
+        (model.originalLanguage ?? "").uppercased()
     }
     
     var overview: String {

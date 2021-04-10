@@ -205,7 +205,14 @@ extension DetailViewController {
     }
     
     private func setupLbOverview() {
+        lbOverview.font = .rounded(ofSize: 12, weight: .regular)
+        lbOverview.textColor = .prussianBlue
+        lbOverview.numberOfLines = 0
         
+        lbOverview.translatesAutoresizingMaskIntoConstraints = false
+        lbOverview.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor, constant: 20).isActive = true
+        lbOverview.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor, constant: -20).isActive = true
+        lbOverview.topAnchor.constraint(equalTo: stvHInfo.bottomAnchor, constant: 20).isActive = true
     }
 
     
