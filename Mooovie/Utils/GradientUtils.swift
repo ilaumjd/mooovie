@@ -17,7 +17,7 @@ class GradientUtils {
         gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
         
         gradient.name = "gradient"
-//        gradient.zPosition = -1
+        gradient.zPosition = -1
         gradient.cornerRadius = view.layer.cornerRadius
         gradient.masksToBounds = view.layer.masksToBounds
         

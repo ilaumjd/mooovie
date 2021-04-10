@@ -54,6 +54,7 @@ extension DetailViewController {
         scv.contentSize = scvSize
         scv.autoresizingMask = .flexibleWidth
         scv.contentInsetAdjustmentBehavior = .never
+        scv.bounces = false
         
         vScvContent.frame.size = scvSize
         vScvContent.backgroundColor = .clear
@@ -67,7 +68,6 @@ extension DetailViewController {
     
     func setupIvBackdrop() {
         ivBackdrop.contentMode = .scaleAspectFill
-//        ivBackdrop.image.
         
         ivBackdrop.translatesAutoresizingMaskIntoConstraints = false
         ivBackdrop.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true

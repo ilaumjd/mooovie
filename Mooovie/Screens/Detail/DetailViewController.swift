@@ -49,8 +49,8 @@ extension DetailViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.standardAppearance.backgroundColor = .clear
         super.viewWillAppear(animated)
-//        navigationController?.navigationBar.prefersLargeTitles = false
         
     }
     

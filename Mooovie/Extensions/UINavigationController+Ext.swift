@@ -14,6 +14,8 @@ extension UINavigationController {
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.pureWhite, .font: UIFont.rounded(ofSize: 40, weight: .bold)]
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.pureWhite, .font: UIFont.rounded(ofSize: 25, weight: .semibold)]
+        navBarAppearance.shadowImage = UIImage()
+        navBarAppearance.shadowColor = .clear
         navBarAppearance.backgroundColor = .maximumRed
         
         self.navigationBar.standardAppearance = navBarAppearance
