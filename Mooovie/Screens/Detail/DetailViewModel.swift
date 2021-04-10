@@ -16,6 +16,7 @@ class DetailViewModel {
     
     let movieId = PublishSubject<Int>()
     let movie = BehaviorRelay<MovieViewModel?>(value: nil)
+    let trailerList = BehaviorRelay<[TrailerViewModel]>(value: [])
     
     init(service: MovieServiceProtocol) {
         self.service = service
@@ -44,7 +45,11 @@ extension DetailViewModel {
     
     private func fetchTrailers(movieId: Int) {
         service.fetchTrailers(movieId: movieId) { trailerList in
-            
+            if let trailerList = trailerList {
+                self.trailerList.accept(trailerList
+                                            .filter { $0.site == "Youtube" }
+                                            .map(TrailerViewModel.init))
+            }
         }
     }
     

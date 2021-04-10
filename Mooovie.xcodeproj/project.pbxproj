@@ -10,6 +10,9 @@
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
 		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
+		D9D4DFC22622691B00CD82CB /* TrailerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFC12622691B00CD82CB /* TrailerCell.swift */; };
+		D9D4DFC526226A3400CD82CB /* TrailerCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFC426226A3400CD82CB /* TrailerCell+UI.swift */; };
+		D9D4DFC826226A4800CD82CB /* TrailerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFC726226A4800CD82CB /* TrailerViewModel.swift */; };
 		D9D6C8CA261E86FB00B4D4ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8C9261E86FB00B4D4ED /* AppDelegate.swift */; };
 		D9D6C8CC261E86FB00B4D4ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8CB261E86FB00B4D4ED /* SceneDelegate.swift */; };
 		D9D6C8CE261E86FB00B4D4ED /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8CD261E86FB00B4D4ED /* ListViewController.swift */; };
@@ -42,6 +45,9 @@
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
+		D9D4DFC12622691B00CD82CB /* TrailerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCell.swift; sourceTree = "<group>"; };
+		D9D4DFC426226A3400CD82CB /* TrailerCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrailerCell+UI.swift"; sourceTree = "<group>"; };
+		D9D4DFC726226A4800CD82CB /* TrailerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewModel.swift; sourceTree = "<group>"; };
 		D9D6C8C6261E86FB00B4D4ED /* Mooovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D6C8C9261E86FB00B4D4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D6C8CB261E86FB00B4D4ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +214,9 @@
 				D9D6C927261F629100B4D4ED /* DetailViewController+UI.swift */,
 				D9D6C92A261F629B00B4D4ED /* DetailViewModel.swift */,
 				D9D6C91C261F5A5E00B4D4ED /* MovieViewModel.swift */,
+				D9D4DFC12622691B00CD82CB /* TrailerCell.swift */,
+				D9D4DFC426226A3400CD82CB /* TrailerCell+UI.swift */,
+				D9D4DFC726226A4800CD82CB /* TrailerViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -330,8 +339,10 @@
 				D9D6C908261EBCDE00B4D4ED /* MovieCell.swift in Sources */,
 				D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */,
 				D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */,
+				D9D4DFC526226A3400CD82CB /* TrailerCell+UI.swift in Sources */,
 				D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */,
 				D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */,
+				D9D4DFC826226A4800CD82CB /* TrailerViewModel.swift in Sources */,
 				D9D6C90B261EC4EE00B4D4ED /* UIColor+Ext.swift in Sources */,
 				D9D6C91D261F5A5E00B4D4ED /* MovieViewModel.swift in Sources */,
 				D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */,
@@ -340,6 +351,7 @@
 				D9D6C8CE261E86FB00B4D4ED /* ListViewController.swift in Sources */,
 				D9D6C92E261FDF5800B4D4ED /* UIView+Ext.swift in Sources */,
 				D9D6C8CA261E86FB00B4D4ED /* AppDelegate.swift in Sources */,
+				D9D4DFC22622691B00CD82CB /* TrailerCell.swift in Sources */,
 				D9D6C920261F5F0C00B4D4ED /* UIImageView+Ext.swift in Sources */,
 				D9D6C90E261EDF3E00B4D4ED /* MovieCell+UI.swift in Sources */,
 				D9D6C928261F629100B4D4ED /* DetailViewController+UI.swift in Sources */,
