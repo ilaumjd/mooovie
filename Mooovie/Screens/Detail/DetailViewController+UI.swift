@@ -151,6 +151,8 @@ extension DetailViewController {
     private func setupLbLanguage() {
         lbLanguage.font = .rounded(ofSize: 20, weight: .bold)
         lbLanguage.textColor = .prussianBlue
+        lbLanguage.layer.borderWidth = 2
+        lbLanguage.layer.borderColor = UIColor.prussianBlue.cgColor
         
         lbLanguage.translatesAutoresizingMaskIntoConstraints = false
         lbLanguage.centerXAnchor.constraint(equalTo: vLanguage.centerXAnchor).isActive = true

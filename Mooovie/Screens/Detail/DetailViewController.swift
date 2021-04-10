@@ -65,7 +65,7 @@ extension DetailViewController {
                     self?.lbVote.text = movie.vote
                     self?.lbVoteCount.text = movie.voteCount
                     self?.lbRuntime.text = movie.runtime
-                    self?.lbLanguage.text = movie.language
+                    self?.lbLanguage.text = " " + movie.language + " "
                 }
             }).disposed(by: disposeBag)
     }
