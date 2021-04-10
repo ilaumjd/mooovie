@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     
     var scv = UIScrollView()
     var vScvContent = UIView()
+    var ivBackdrop = UIImageView()
     var ivPoster = UIImageView()
     var stvHInfo = UIStackView()
     var vVote = UIView()
@@ -62,6 +63,7 @@ extension DetailViewController {
             .subscribe(onNext: { [weak self] movie in
                 DispatchQueue.main.async {
                     self?.ivPoster.from(movie.poster)
+                    self?.ivBackdrop.from(movie.backdrop)
                     self?.lbVote.text = movie.vote
                     self?.lbVoteCount.text = movie.voteCount
                     self?.lbRuntime.text = movie.runtime

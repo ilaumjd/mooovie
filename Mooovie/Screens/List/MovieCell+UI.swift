@@ -28,6 +28,7 @@ extension MovieCell {
     }
     
     private func setupIvPoster() {
+        ivPoster.contentMode = .scaleAspectFill
         ivPoster.backgroundColor = .prussianBlue
         ivPoster.layer.cornerRadius = 10
         ivPoster.layer.masksToBounds = true

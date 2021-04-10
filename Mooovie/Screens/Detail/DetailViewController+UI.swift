@@ -20,6 +20,7 @@ extension DetailViewController {
         
         setupSvMovie()
         setupIvPoster()
+        setupIvBackdrop()
         setupStvHInfo()
         setupIvVote()
         setupLbVote()
@@ -33,6 +34,7 @@ extension DetailViewController {
     private func addSubviews() {
         view.addSubview(scv)
         scv.addSubview(vScvContent)
+        vScvContent.addSubview(ivBackdrop)
         vScvContent.addSubview(ivPoster)
         vScvContent.addSubview(stvHInfo)
         stvHInfo.addArrangedSubview(vVote)
@@ -63,8 +65,21 @@ extension DetailViewController {
         scv.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
+    func setupIvBackdrop() {
+        ivBackdrop.contentMode = .scaleAspectFill
+        
+        ivBackdrop.translatesAutoresizingMaskIntoConstraints = false
+        ivBackdrop.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
+        ivBackdrop.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
+        ivBackdrop.topAnchor.constraint(equalTo: vScvContent.topAnchor).isActive = true
+        ivBackdrop.bottomAnchor.constraint(equalTo: ivPoster.centerYAnchor).isActive = true
+    }
+    
     private func setupIvPoster() {
-        ivPoster.backgroundColor = .orange
+        ivPoster.contentMode = .scaleAspectFill
+        ivPoster.backgroundColor = .prussianBlue
+        ivPoster.layer.cornerRadius = 10
+        ivPoster.layer.masksToBounds = true
 
         ivPoster.translatesAutoresizingMaskIntoConstraints = false
         ivPoster.widthAnchor.constraint(equalToConstant: 200).isActive = true
