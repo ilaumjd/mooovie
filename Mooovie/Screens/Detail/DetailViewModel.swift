@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class DetailViewModel {
     
@@ -14,7 +15,7 @@ class DetailViewModel {
     private let disposeBag = DisposeBag()
     
     let movieId = PublishSubject<Int>()
-    let movie = PublishSubject<MovieViewModel>()
+    let movie = BehaviorRelay<MovieViewModel?>(value: nil)
     
     init(service: MovieServiceProtocol) {
         self.service = service
@@ -35,7 +36,7 @@ extension DetailViewModel {
     private func fetchDetail(movieId: Int) {
         service.fetchMovieDetail(movieId: movieId) { movie in
             if let movie = movie {
-                self.movie.onNext(MovieViewModel(model: movie))
+                self.movie.accept(MovieViewModel(model: movie))
             }
         }
     }

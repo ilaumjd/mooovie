@@ -57,4 +57,8 @@ extension MovieViewModel {
         model.overview ?? ""
     }
     
+    var website: String {
+        model.homepage ?? ""
+    }
+    
 }

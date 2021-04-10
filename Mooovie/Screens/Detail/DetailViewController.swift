@@ -76,15 +76,15 @@ extension DetailViewController {
         vm.movie
             .subscribe(onNext: { [weak self] movie in
                 DispatchQueue.main.async {
-                    self?.ivPoster.from(movie.poster)
-                    self?.lbTitle.text = movie.title
-                    self?.lbTagline.text = movie.tagline
-                    self?.ivBackdrop.from(movie.backdrop)
-                    self?.lbVote.text = movie.vote
-                    self?.lbVoteCount.text = movie.voteCount
-                    self?.lbRuntime.text = movie.runtime
-                    self?.lbLanguage.text = " " + movie.language + " "
-                    self?.lbOverview.text = movie.overview
+                    self?.ivBackdrop.from(movie?.backdrop ?? "")
+                    self?.ivPoster.from(movie?.poster ?? "")
+                    self?.lbTitle.text = movie?.title
+                    self?.lbTagline.text = movie?.tagline
+                    self?.lbVote.text = movie?.vote
+                    self?.lbVoteCount.text = movie?.voteCount
+                    self?.lbRuntime.text = movie?.runtime
+                    self?.lbLanguage.text = " " + (movie?.language ?? "") + " "
+                    self?.lbOverview.text = movie?.overview
                 }
             }).disposed(by: disposeBag)
     }
@@ -101,12 +101,15 @@ extension DetailViewController {
     
     private func setupRxWebsiteTap() {
         btWebsite.rx.tap
-            .subscribe(onNext: {
-                self.btWebsite.alpha = 1
+            .subscribe(onNext: { [weak self] in
+                self?.btWebsite.alpha = 1
+                if let string = self?.vm.movie.value?.website, let url = URL(string: string) {
+                    UIApplication.shared.open(url)
+                }
             }).disposed(by: disposeBag)
         btWebsite.rx.controlEvent(.touchDown)
-            .subscribe(onNext: {
-                self.btWebsite.alpha = 0.5
+            .subscribe(onNext: { [weak self] in
+                self?.btWebsite.alpha = 0.5
             }).disposed(by: disposeBag)
     }
     
