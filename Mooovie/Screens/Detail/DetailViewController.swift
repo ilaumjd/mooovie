@@ -21,7 +21,9 @@ class DetailViewController: UIViewController {
     var ivVote = UIImageView()
     var lbVote = UILabel()
     var lbVoteCount = UILabel()
+    var vRuntime = UIView()
     var lbRuntime = UILabel()
+    var vLanguage = UIView()
     var lbLanguage = UILabel()
     
     static func create(movieId: Int?) -> DetailViewController {
