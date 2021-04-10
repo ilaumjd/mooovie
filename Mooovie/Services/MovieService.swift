@@ -33,4 +33,16 @@ class MovieService: MovieServiceProtocol {
         }
     }
     
+    func fetchTrailers(movieId: Int, completion: @escaping (([Trailer]?) -> ())) {
+        AF.request("\(Constants.API.baseURL)/movie/\(movieId)/videos?api_key=\(Constants.API.key)&language=en-US&page=1").responseDecodable(of: TrailerList.self) { response in
+            debugPrint(response)
+            switch response.result {
+            case .success(let trailerList):
+                completion(trailerList.results)
+            case .failure(let _):
+                completion(nil)
+            }
+        }
+    }
+    
 }

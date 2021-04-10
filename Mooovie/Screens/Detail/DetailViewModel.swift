@@ -26,6 +26,7 @@ class DetailViewModel {
         self.movieId
             .subscribe(onNext: { [weak self] movieId in
                 self?.fetchDetail(movieId: movieId)
+                self?.fetchTrailers(movieId: movieId)
             }).disposed(by: disposeBag)
     }
     
@@ -38,6 +39,12 @@ extension DetailViewModel {
             if let movie = movie {
                 self.movie.accept(MovieViewModel(model: movie))
             }
+        }
+    }
+    
+    private func fetchTrailers(movieId: Int) {
+        service.fetchTrailers(movieId: movieId) { trailerList in
+            
         }
     }
     
