@@ -73,7 +73,7 @@ extension DetailViewController {
         ivBackdrop.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
         ivBackdrop.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
         ivBackdrop.topAnchor.constraint(equalTo: vScvContent.topAnchor).isActive = true
-        ivBackdrop.heightAnchor.constraint(equalToConstant: 260).isActive
+        ivBackdrop.heightAnchor.constraint(equalToConstant: 260).isActive = true
     }
     
     private func setupIvPoster() {

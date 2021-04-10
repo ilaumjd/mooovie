@@ -21,8 +21,10 @@ extension UINavigationController {
         self.navigationBar.scrollEdgeAppearance = navBarAppearance
         
         self.navigationBar.barStyle = .black
-        self.navigationBar.isTranslucent = false
+        self.navigationBar.isTranslucent = true
         self.navigationBar.tintColor = .white
+        
+        self.navigationItem.largeTitleDisplayMode = .always
     }
     
 }
