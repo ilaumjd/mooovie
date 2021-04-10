@@ -24,7 +24,9 @@ extension DetailViewController {
         setupIvVote()
         setupLbVote()
         setupLbVoteCount()
+        setupIvRuntime()
         setupLbRuntime()
+        setupLbMinutes()
         setupLbLanguage()
     }
     
@@ -38,7 +40,9 @@ extension DetailViewController {
         vVote.addSubview(lbVote)
         vVote.addSubview(lbVoteCount)
         stvHInfo.addArrangedSubview(vRuntime)
+        vRuntime.addSubview(ivRuntime)
         vRuntime.addSubview(lbRuntime)
+        vRuntime.addSubview(lbMinutes)
         stvHInfo.addArrangedSubview(vLanguage)
         vLanguage.addSubview(lbLanguage)
     }
@@ -94,7 +98,6 @@ extension DetailViewController {
     }
     
     private func setupLbVote() {
-        lbVote.text = "6.5"
         lbVote.font = .rounded(ofSize: 20, weight: .bold)
         lbVote.textColor = .prussianBlue
         
@@ -105,7 +108,6 @@ extension DetailViewController {
     }
     
     private func setupLbVoteCount() {
-        lbVoteCount.text = "3917 votes"
         lbVoteCount.font = .rounded(ofSize: 10, weight: .regular)
         lbVoteCount.textColor = .prussianBlue
         
@@ -115,20 +117,38 @@ extension DetailViewController {
         lbVoteCount.topAnchor.constraint(equalTo: lbVote.bottomAnchor, constant: 0).isActive = true
     }
     
+    private func setupIvRuntime() {
+        ivRuntime.image = UIImage(systemName: "clock")
+        ivRuntime.tintColor = .prussianBlue
+        
+        ivRuntime.translatesAutoresizingMaskIntoConstraints = false
+        ivRuntime.centerXAnchor.constraint(equalTo: vRuntime.centerXAnchor).isActive = true
+        ivRuntime.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        ivRuntime.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    
     private func setupLbRuntime() {
-        lbRuntime.backgroundColor = .green
-        lbRuntime.text = "6.5"
         lbRuntime.font = .rounded(ofSize: 20, weight: .bold)
         lbRuntime.textColor = .prussianBlue
         
         lbRuntime.translatesAutoresizingMaskIntoConstraints = false
         lbRuntime.centerXAnchor.constraint(equalTo: vRuntime.centerXAnchor).isActive = true
         lbRuntime.centerYAnchor.constraint(equalTo: vRuntime.centerYAnchor).isActive = true
+        lbRuntime.topAnchor.constraint(equalTo: ivRuntime.bottomAnchor, constant: 0).isActive = true
+    }
+    
+    private func setupLbMinutes() {
+        lbMinutes.text = "minutes"
+        lbMinutes.font = .rounded(ofSize: 10, weight: .regular)
+        lbMinutes.textColor = .prussianBlue
+        
+        lbMinutes.translatesAutoresizingMaskIntoConstraints = false
+        lbMinutes.translatesAutoresizingMaskIntoConstraints = false
+        lbMinutes.centerXAnchor.constraint(equalTo: vRuntime.centerXAnchor).isActive = true
+        lbMinutes.topAnchor.constraint(equalTo: lbRuntime.bottomAnchor, constant: 0).isActive = true
     }
     
     private func setupLbLanguage() {
-        lbLanguage.backgroundColor = .blue
-        lbLanguage.text = "6.5"
         lbLanguage.font = .rounded(ofSize: 20, weight: .bold)
         lbLanguage.textColor = .prussianBlue
         

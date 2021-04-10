@@ -24,7 +24,9 @@ class DetailViewController: UIViewController {
     var lbVote = UILabel()
     var lbVoteCount = UILabel()
     var vRuntime = UIView()
+    var ivRuntime = UIImageView()
     var lbRuntime = UILabel()
+    var lbMinutes = UILabel()
     var vLanguage = UIView()
     var lbLanguage = UILabel()
     
