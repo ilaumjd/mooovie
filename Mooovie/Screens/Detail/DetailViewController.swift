@@ -68,6 +68,11 @@ extension DetailViewController {
         GradientUtils.addVertical(to: ivBackdrop, startColor: .clear, endColor: .white)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.standardAppearance.backgroundColor = .maximumRed
+    }
+    
 }
 
 // MARK: MEMBER

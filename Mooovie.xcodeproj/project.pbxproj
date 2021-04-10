@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
+		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D6C8CA261E86FB00B4D4ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8C9261E86FB00B4D4ED /* AppDelegate.swift */; };
 		D9D6C8CC261E86FB00B4D4ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8CB261E86FB00B4D4ED /* SceneDelegate.swift */; };
 		D9D6C8CE261E86FB00B4D4ED /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8CD261E86FB00B4D4ED /* ListViewController.swift */; };
 		D9D6C8D3261E86FF00B4D4ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D6C8D2261E86FF00B4D4ED /* Assets.xcassets */; };
 		D9D6C8D6261E86FF00B4D4ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D6C8D4261E86FF00B4D4ED /* LaunchScreen.storyboard */; };
 		D9D6C8E5261E902600B4D4ED /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8E4261E902600B4D4ED /* UIFont+Ext.swift */; };
-		D9D6C8E9261EA5BA00B4D4ED /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8E8261EA5BA00B4D4ED /* UINavigationController+Ext.swift */; };
 		D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */; };
 		D9D6C8F0261EA82900B4D4ED /* MovieServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8EF261EA82900B4D4ED /* MovieServiceProtocol.swift */; };
 		D9D6C8F4261EA83300B4D4ED /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8F3261EA83300B4D4ED /* MovieService.swift */; };
@@ -25,14 +25,12 @@
 		D9D6C90B261EC4EE00B4D4ED /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C90A261EC4EE00B4D4ED /* UIColor+Ext.swift */; };
 		D9D6C90E261EDF3E00B4D4ED /* MovieCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C90D261EDF3E00B4D4ED /* MovieCell+UI.swift */; };
 		D9D6C911261EDF6200B4D4ED /* ListViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C910261EDF6200B4D4ED /* ListViewController+UI.swift */; };
-		D9D6C917261F593A00B4D4ED /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C916261F593A00B4D4ED /* MooovieNavigationController.swift */; };
 		D9D6C91D261F5A5E00B4D4ED /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C91C261F5A5E00B4D4ED /* MovieViewModel.swift */; };
 		D9D6C920261F5F0C00B4D4ED /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C91F261F5F0C00B4D4ED /* UIImageView+Ext.swift */; };
 		D9D6C924261F610700B4D4ED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C923261F610700B4D4ED /* DetailViewController.swift */; };
 		D9D6C928261F629100B4D4ED /* DetailViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C927261F629100B4D4ED /* DetailViewController+UI.swift */; };
 		D9D6C92B261F629B00B4D4ED /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C92A261F629B00B4D4ED /* DetailViewModel.swift */; };
 		D9D6C92E261FDF5800B4D4ED /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C92D261FDF5800B4D4ED /* UIView+Ext.swift */; };
-		D9D6C931261FE11B00B4D4ED /* MooovieSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C930261FE11B00B4D4ED /* MooovieSeparator.swift */; };
 		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +39,7 @@
 		7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.debug.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.debug.xcconfig"; sourceTree = "<group>"; };
 		AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.release.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.release.xcconfig"; sourceTree = "<group>"; };
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
+		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D6C8C6261E86FB00B4D4ED /* Mooovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D6C8C9261E86FB00B4D4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D6C8CB261E86FB00B4D4ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +48,6 @@
 		D9D6C8D5261E86FF00B4D4ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9D6C8D7261E86FF00B4D4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9D6C8E4261E902600B4D4ED /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
-		D9D6C8E8261EA5BA00B4D4ED /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		D9D6C8EB261EA7BD00B4D4ED /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D9D6C8EF261EA82900B4D4ED /* MovieServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceProtocol.swift; sourceTree = "<group>"; };
 		D9D6C8F3261EA83300B4D4ED /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
@@ -60,14 +58,12 @@
 		D9D6C90A261EC4EE00B4D4ED /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		D9D6C90D261EDF3E00B4D4ED /* MovieCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieCell+UI.swift"; sourceTree = "<group>"; };
 		D9D6C910261EDF6200B4D4ED /* ListViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UI.swift"; sourceTree = "<group>"; };
-		D9D6C916261F593A00B4D4ED /* MooovieNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D6C91C261F5A5E00B4D4ED /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		D9D6C91F261F5F0C00B4D4ED /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		D9D6C923261F610700B4D4ED /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D9D6C927261F629100B4D4ED /* DetailViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+UI.swift"; sourceTree = "<group>"; };
 		D9D6C92A261F629B00B4D4ED /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		D9D6C92D261FDF5800B4D4ED /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		D9D6C930261FE11B00B4D4ED /* MooovieSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooovieSeparator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +103,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		D9D4DFA2262203DF00CD82CB /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		D9D6C8BD261E86FB00B4D4ED = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +132,8 @@
 		D9D6C8C8261E86FB00B4D4ED /* Mooovie */ = {
 			isa = PBXGroup;
 			children = (
+				D9D4DFA2262203DF00CD82CB /* Custom Views */,
 				D9D4DF962621C0E700CD82CB /* Utils */,
-				D9D6C919261F59A300B4D4ED /* Custom Views */,
 				D9D6C914261EE0F100B4D4ED /* Models */,
 				D9D6C8EE261EA80300B4D4ED /* Services */,
 				D9D6C8E3261E900E00B4D4ED /* Extensions */,
@@ -169,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				D9D6C8E4261E902600B4D4ED /* UIFont+Ext.swift */,
-				D9D6C8E8261EA5BA00B4D4ED /* UINavigationController+Ext.swift */,
 				D9D6C90A261EC4EE00B4D4ED /* UIColor+Ext.swift */,
 				D9D6C91F261F5F0C00B4D4ED /* UIImageView+Ext.swift */,
 				D9D6C92D261FDF5800B4D4ED /* UIView+Ext.swift */,
@@ -193,15 +196,6 @@
 				D9D6C904261EBA8200B4D4ED /* MovieList.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D9D6C919261F59A300B4D4ED /* Custom Views */ = {
-			isa = PBXGroup;
-			children = (
-				D9D6C916261F593A00B4D4ED /* MooovieNavigationController.swift */,
-				D9D6C930261FE11B00B4D4ED /* MooovieSeparator.swift */,
-			);
-			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		D9D6C922261F60F600B4D4ED /* Detail */ = {
@@ -331,10 +325,9 @@
 				D9D6C8F0261EA82900B4D4ED /* MovieServiceProtocol.swift in Sources */,
 				D9D6C8E5261E902600B4D4ED /* UIFont+Ext.swift in Sources */,
 				D9D6C908261EBCDE00B4D4ED /* MovieCell.swift in Sources */,
-				D9D6C8E9261EA5BA00B4D4ED /* UINavigationController+Ext.swift in Sources */,
 				D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */,
+				D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */,
 				D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */,
-				D9D6C917261F593A00B4D4ED /* MooovieNavigationController.swift in Sources */,
 				D9D6C90B261EC4EE00B4D4ED /* UIColor+Ext.swift in Sources */,
 				D9D6C91D261F5A5E00B4D4ED /* MovieViewModel.swift in Sources */,
 				D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */,
@@ -347,7 +340,6 @@
 				D9D6C90E261EDF3E00B4D4ED /* MovieCell+UI.swift in Sources */,
 				D9D6C928261F629100B4D4ED /* DetailViewController+UI.swift in Sources */,
 				D9D6C92B261F629B00B4D4ED /* DetailViewModel.swift in Sources */,
-				D9D6C931261FE11B00B4D4ED /* MooovieSeparator.swift in Sources */,
 				D9D6C8F4261EA83300B4D4ED /* MovieService.swift in Sources */,
 				D9D6C8CC261E86FB00B4D4ED /* SceneDelegate.swift in Sources */,
 				D9D6C911261EDF6200B4D4ED /* ListViewController+UI.swift in Sources */,
