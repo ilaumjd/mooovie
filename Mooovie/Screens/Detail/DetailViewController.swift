@@ -53,6 +53,12 @@ extension DetailViewController {
 //        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        view.layoutIfNeeded()
+        GradientUtils.addVertical(to: ivBackdrop, startColor: .clear, endColor: .white)
+    }
+    
 }
 
 // MARK: MEMBER

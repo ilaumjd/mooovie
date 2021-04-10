@@ -67,12 +67,13 @@ extension DetailViewController {
     
     func setupIvBackdrop() {
         ivBackdrop.contentMode = .scaleAspectFill
+//        ivBackdrop.image.
         
         ivBackdrop.translatesAutoresizingMaskIntoConstraints = false
         ivBackdrop.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
         ivBackdrop.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
         ivBackdrop.topAnchor.constraint(equalTo: vScvContent.topAnchor).isActive = true
-        ivBackdrop.bottomAnchor.constraint(equalTo: ivPoster.centerYAnchor).isActive = true
+        ivBackdrop.heightAnchor.constraint(equalToConstant: 260).isActive
     }
     
     private func setupIvPoster() {
