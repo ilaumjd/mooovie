@@ -77,6 +77,14 @@ extension DetailViewController {
                     self?.lbLanguage.text = " " + movie.language + " "
                 }
             }).disposed(by: disposeBag)
+        
+        scv.rx.didScroll
+            .subscribe(onNext: { [weak self] in
+                let offset = self?.scv.contentOffset.y ?? 0
+                let alphaOffset = (self?.ivBackdrop.frame.maxY ?? 0)
+                let alpha = min(offset / alphaOffset, 1)
+                self?.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.maximumRed.withAlphaComponent(alpha)
+            }).disposed(by: disposeBag)
     }
     
 }
