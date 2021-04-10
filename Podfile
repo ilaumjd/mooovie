@@ -10,5 +10,6 @@ target 'Mooovie' do
   pod 'AlamofireImage', '~> 4.1'
   pod 'RxSwift', '6.1.0'
   pod 'RxCocoa', '6.1.0'
+  pod "youtube-ios-player-helper", "~> 1.0.3"
 
 end

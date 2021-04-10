@@ -15,7 +15,7 @@ class MovieService: MovieServiceProtocol {
             switch response.result {
             case .success(let movieList):
                 completion(movieList.results)
-            case .failure(let _):
+            case .failure( _):
                 completion(nil)
             }
         }
@@ -27,7 +27,7 @@ class MovieService: MovieServiceProtocol {
             switch response.result {
             case .success(let movie):
                 completion(movie)
-            case .failure(let _):
+            case .failure( _):
                 completion(nil)
             }
         }
@@ -39,7 +39,7 @@ class MovieService: MovieServiceProtocol {
             switch response.result {
             case .success(let trailerList):
                 completion(trailerList.results)
-            case .failure(let _):
+            case .failure( _):
                 completion(nil)
             }
         }
