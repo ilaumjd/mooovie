@@ -37,6 +37,8 @@ class DetailViewController: UIViewController {
     var lbWebsite = UILabel()
     var lbInfo = UILabel()
     var lbOverview = UILabel()
+    var lbTrailer = UILabel()
+    var cvTrailer = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     static func create(movieId: Int?) -> DetailViewController {
         let vc = DetailViewController()
@@ -120,6 +122,10 @@ extension DetailViewController {
             .subscribe(onNext: { [weak self] in
                 self?.btWebsite.alpha = 0.5
             }).disposed(by: disposeBag)
+    }
+    
+    private func setupRxTrailerList() {
+        
     }
     
 }

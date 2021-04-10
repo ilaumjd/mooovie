@@ -35,6 +35,8 @@ extension DetailViewController {
         setupLbWebsite()
         setupLbInfo()
         setupLbOverview()
+        setupLbTrailer()
+        setupCvTrailer()
     }
     
     private func addSubviews() {
@@ -60,6 +62,8 @@ extension DetailViewController {
         btWebsite.addSubview(lbWebsite)
         vScvContent.addSubview(lbInfo)
         vScvContent.addSubview(lbOverview)
+        vScvContent.addSubview(lbTrailer)
+        vScvContent.addSubview(cvTrailer)
     }
     
     private func setupSvMovie() {
@@ -254,6 +258,29 @@ extension DetailViewController {
         lbOverview.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor, constant: 20).isActive = true
         lbOverview.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor, constant: -20).isActive = true
         lbOverview.topAnchor.constraint(equalTo: lbInfo.bottomAnchor, constant: 10).isActive = true
+    }
+    
+    private func setupLbTrailer() {
+        lbTrailer.text = "Trailers"
+        lbTrailer.font = .rounded(ofSize: 16, weight: .bold)
+        lbTrailer.textColor = .prussianBlue
+        
+        lbTrailer.translatesAutoresizingMaskIntoConstraints = false
+        lbTrailer.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor, constant: 20).isActive = true
+        lbTrailer.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor, constant: -20).isActive = true
+        lbTrailer.topAnchor.constraint(equalTo: lbOverview.bottomAnchor, constant: 20).isActive = true
+    }
+    
+    private func setupCvTrailer() {
+        cvTrailer.backgroundColor = .green
+        cvTrailer.showsVerticalScrollIndicator = false
+        cvTrailer.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
+        
+        cvTrailer.translatesAutoresizingMaskIntoConstraints = false
+        cvTrailer.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
+        cvTrailer.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
+        cvTrailer.topAnchor.constraint(equalTo: lbTrailer.bottomAnchor, constant: 10).isActive = true
+        cvTrailer.heightAnchor.constraint(equalToConstant: 160).isActive = true
     }
 
     
