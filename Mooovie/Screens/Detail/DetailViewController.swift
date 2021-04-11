@@ -58,6 +58,7 @@ extension DetailViewController {
         setupRxScrollNavbarTransparency()
         setupRxWebsiteTap()
         setupRxTrailerList()
+        setupRxDownloadPoster()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -147,6 +148,13 @@ extension DetailViewController {
                 }
             }.disposed(by: disposeBag)
     }
+    
+    private func setupRxDownloadPoster() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "tray.and.arrow.down"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem?.rx.tap
+            .subscribe(onNext: {
+                print("SAA")
+            }).disposed(by: disposeBag)}
     
 }
 
