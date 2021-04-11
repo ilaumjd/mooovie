@@ -272,7 +272,7 @@ extension DetailViewController {
     }
     
     private func setupCvTrailer() {
-        cvTrailer.backgroundColor = .green
+        cvTrailer.backgroundColor = .clear
         cvTrailer.showsHorizontalScrollIndicator = false
         if let layout = cvTrailer.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
@@ -282,7 +282,7 @@ extension DetailViewController {
         cvTrailer.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true
         cvTrailer.trailingAnchor.constraint(equalTo: vScvContent.trailingAnchor).isActive = true
         cvTrailer.topAnchor.constraint(equalTo: lbTrailer.bottomAnchor, constant: 10).isActive = true
-        cvTrailer.heightAnchor.constraint(equalToConstant: 160).isActive = true
+        cvTrailer.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
 
     

@@ -38,6 +38,10 @@ extension TrailerCell {
     }
     
     func setupYtTrailer() {
+        ytTrailer.layer.cornerRadius = 6
+        ytTrailer.layer.masksToBounds = true
+        ytTrailer.clipsToBounds = true
+        
         ytTrailer.translatesAutoresizingMaskIntoConstraints = false
         ytTrailer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         ytTrailer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
@@ -51,7 +55,7 @@ extension TrailerCell {
         lbTrailer.translatesAutoresizingMaskIntoConstraints = false
         lbTrailer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         lbTrailer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        lbTrailer.topAnchor.constraint(equalTo: ytTrailer.bottomAnchor, constant: 10).isActive = true
+        lbTrailer.topAnchor.constraint(equalTo: ytTrailer.bottomAnchor, constant: 5).isActive = true
         lbTrailer.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
