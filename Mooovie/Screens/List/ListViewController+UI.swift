@@ -16,7 +16,7 @@ extension ListViewController {
     func setupUI() {
         self.title = "Mooovie"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.view.backgroundColor = .pureWhite
+        self.view.backgroundColor = .maximumRed
         
         view.addSubview(vCategory)
         vCategory.addSubview(scCategory)
@@ -28,7 +28,7 @@ extension ListViewController {
     }
     
     private func setupVCategory() {
-        vCategory.backgroundColor = .maximumRed
+        vCategory.backgroundColor = .clear
         
         vCategory.translatesAutoresizingMaskIntoConstraints = false
         vCategory.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -50,13 +50,13 @@ extension ListViewController {
     }
     
     private func setupCvMovie() {
-        cvMovie.backgroundColor = .clear
+        cvMovie.backgroundColor = .pureWhite
         cvMovie.showsVerticalScrollIndicator = false
         cvMovie.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
         
         cvMovie.translatesAutoresizingMaskIntoConstraints = false
-        cvMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        cvMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        cvMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        cvMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         cvMovie.topAnchor.constraint(equalTo: vCategory.bottomAnchor).isActive = true
         cvMovie.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
