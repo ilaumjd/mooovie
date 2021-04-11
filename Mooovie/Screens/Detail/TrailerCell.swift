@@ -56,3 +56,13 @@ extension TrailerCell {
     }
     
 }
+
+// MEMBER
+extension TrailerCell {
+    
+    func configure(vm: TrailerViewModel) {
+        ytTrailer.load(withVideoId: vm.key)
+        lbTrailer.text = vm.name
+    }
+    
+}

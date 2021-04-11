@@ -114,14 +114,18 @@ extension DetailViewController {
     private func setupRxWebsiteTap() {
         btWebsite.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.btWebsite.alpha = 1
-                if let string = self?.vm.movie.value?.website, let url = URL(string: string) {
-                    UIApplication.shared.open(url)
+                DispatchQueue.main.async {
+                    self?.btWebsite.alpha = 1
+                    if let string = self?.vm.movie.value?.website, let url = URL(string: string) {
+                        UIApplication.shared.open(url)
+                    }
                 }
             }).disposed(by: disposeBag)
         btWebsite.rx.controlEvent(.touchDown)
             .subscribe(onNext: { [weak self] in
-                self?.btWebsite.alpha = 0.5
+                DispatchQueue.main.async {
+                    self?.btWebsite.alpha = 0.5
+                }
             }).disposed(by: disposeBag)
     }
     
@@ -130,8 +134,9 @@ extension DetailViewController {
         cvTrailer.rx.setDelegate(self).disposed(by: disposeBag)
         vm.trailerList
             .bind(to: cvTrailer.rx.items(cellIdentifier: TrailerCell.identifier, cellType: TrailerCell.self)) { row, vm, cell in
-//                cell.backgroundColor = .brown
-                print(vm.name)
+                DispatchQueue.main.async {
+                    cell.configure(vm: vm)
+                }
             }.disposed(by: disposeBag)
     }
     
