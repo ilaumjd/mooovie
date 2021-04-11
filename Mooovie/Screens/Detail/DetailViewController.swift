@@ -152,8 +152,10 @@ extension DetailViewController {
     private func setupRxDownloadPoster() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "tray.and.arrow.down"), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem?.rx.tap
-            .subscribe(onNext: {
-                print("SAA")
+            .subscribe(onNext: { [weak self] in
+                if let image = self?.ivPoster.image {
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                }
             }).disposed(by: disposeBag)}
     
 }
