@@ -18,8 +18,8 @@ extension Category {
         Category(name: "Now Playing", key: "now_playing")
     }
     
-    static var upcoming: Category {
-        Category(name: "Upcoming", key: "upcoming")
+    static var popular: Category {
+        Category(name: "Popular", key: "popular")
     }
     
     static var topRated: Category {
@@ -27,7 +27,7 @@ extension Category {
     }
     
     static func all() -> [Category] {
-        return [nowPlaying, upcoming, topRated]
+        return [nowPlaying, popular, topRated]
     }
     
 }

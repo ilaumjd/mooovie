@@ -9,8 +9,8 @@ import Alamofire
 
 class MovieService: MovieServiceProtocol {
     
-    func fetchList(completion: @escaping (([Movie]?) -> ())) {
-        AF.request("\(Constants.API.baseURL)/movie/now_playing?api_key=\(Constants.API.key)&language=en-US&page=1").responseDecodable(of: MovieList.self) { response in
+    func fetchList(category: String, completion: @escaping (([Movie]?) -> ())) {
+        AF.request("\(Constants.API.baseURL)/movie/\(category)?api_key=\(Constants.API.key)&language=en-US&page=1").responseDecodable(of: MovieList.self) { response in
             debugPrint(response)
             switch response.result {
             case .success(let movieList):

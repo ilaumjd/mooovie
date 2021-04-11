@@ -24,8 +24,8 @@ class ListViewModel {
     
     func setupRx() {
         category
-            .subscribe(onNext: { category in
-                print(category)
+            .subscribe(onNext: { [weak self] category in
+                self?.fetchList(category: category.key)
             }).disposed(by: disposeBag)
     }
     
@@ -33,8 +33,8 @@ class ListViewModel {
 
 extension ListViewModel {
     
-    func fetchList() {
-        self.service.fetchList { movies in
+    func fetchList(category: String) {
+        self.service.fetchList(category: category) { movies in
             if let movies = movies {
                 self.movies.accept(movies.map(MovieViewModel.init))
             }

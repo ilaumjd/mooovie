@@ -28,8 +28,6 @@ extension ListViewController {
         setupUI()
         setupRxSelectCategory()
         setupRxListMovie()
-        
-        self.vm.fetchList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +49,6 @@ extension ListViewController {
     private func setupRxSelectCategory() {
         scCategory.rx.value
             .subscribe(onNext: { [weak self] value in
-                print(value)
                 self?.vm.category.accept(Category.all()[value])
             }).disposed(by: disposeBag)
     }
