@@ -12,11 +12,21 @@ import RxCocoa
 class ListViewModel {
     
     private let service: MovieServiceProtocol
+    private let disposeBag = DisposeBag()
     
+    let category = BehaviorRelay<Category>(value: Category.nowPlaying)
     let movies = BehaviorRelay<[MovieViewModel]>(value: [])
     
     init(service: MovieServiceProtocol) {
         self.service = service
+        setupRx()
+    }
+    
+    func setupRx() {
+        category
+            .subscribe(onNext: { category in
+                print(category)
+            }).disposed(by: disposeBag)
     }
     
 }

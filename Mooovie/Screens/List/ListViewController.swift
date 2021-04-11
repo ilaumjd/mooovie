@@ -15,7 +15,7 @@ class ListViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     var vCategory = UIView()
-    var scCategory = UISegmentedControl(items: ["Now Playing", "Upcoming", "Top Rated"])
+    var scCategory = UISegmentedControl(items: Category.all().map { $0.name })
     var cvMovie = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
 }
@@ -26,6 +26,7 @@ extension ListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupRxSelectCategory()
         setupRxListMovie()
         
         self.vm.fetchList()
@@ -46,6 +47,14 @@ extension ListViewController {
 
 // MARK: MEMBER
 extension ListViewController {
+    
+    private func setupRxSelectCategory() {
+        scCategory.rx.value
+            .subscribe(onNext: { [weak self] value in
+                print(value)
+                self?.vm.category.accept(Category.all()[value])
+            }).disposed(by: disposeBag)
+    }
     
     private func setupRxListMovie() {
         cvMovie.rx.setDelegate(self).disposed(by: disposeBag)
