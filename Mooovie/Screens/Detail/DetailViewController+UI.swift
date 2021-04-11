@@ -273,8 +273,10 @@ extension DetailViewController {
     
     private func setupCvTrailer() {
         cvTrailer.backgroundColor = .green
-        cvTrailer.showsVerticalScrollIndicator = false
-        cvTrailer.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
+        cvTrailer.showsHorizontalScrollIndicator = false
+        if let layout = cvTrailer.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+        }
         
         cvTrailer.translatesAutoresizingMaskIntoConstraints = false
         cvTrailer.leadingAnchor.constraint(equalTo: vScvContent.leadingAnchor).isActive = true

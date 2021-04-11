@@ -57,6 +57,7 @@ extension DetailViewController {
         setupRxMovieDetail()
         setupRxScrollNavbarTransparency()
         setupRxWebsiteTap()
+        setupRxTrailerList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,7 +126,30 @@ extension DetailViewController {
     }
     
     private func setupRxTrailerList() {
-        
+        cvTrailer.register(TrailerCell.self, forCellWithReuseIdentifier: TrailerCell.identifier)
+        cvTrailer.rx.setDelegate(self).disposed(by: disposeBag)
+        vm.trailerList
+            .bind(to: cvTrailer.rx.items(cellIdentifier: TrailerCell.identifier, cellType: TrailerCell.self)) { row, vm, cell in
+                cell.backgroundColor = .brown
+                print(vm.name)
+            }.disposed(by: disposeBag)
+    }
+    
+}
+
+// MARK: COLLECTION VIEW
+extension DetailViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 300, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
     }
     
 }

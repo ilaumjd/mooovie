@@ -47,7 +47,7 @@ extension DetailViewModel {
         service.fetchTrailers(movieId: movieId) { trailerList in
             if let trailerList = trailerList {
                 self.trailerList.accept(trailerList
-                                            .filter { $0.site == "Youtube" }
+                                            .filter { ($0.site ?? "") == "YouTube" }
                                             .map(TrailerViewModel.init))
             }
         }

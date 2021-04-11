@@ -10,13 +10,14 @@ import youtube_ios_player_helper
 
 class TrailerCell: UICollectionViewCell {
     
-    static let identifier = TrailerCell()
+    static let identifier = "TrailerCell"
     
     var ytTrailer = YTPlayerView()
     var lbTrailer = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .red
     }
     
     required init?(coder: NSCoder) {
