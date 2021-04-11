@@ -155,6 +155,9 @@ extension DetailViewController {
             .subscribe(onNext: { [weak self] in
                 if let image = self?.ivPoster.image {
                     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                    let alert = UIAlertController(title: "Poster Saved", message: "", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+                    self?.present(alert, animated: true)
                 }
             }).disposed(by: disposeBag)}
     
