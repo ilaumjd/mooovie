@@ -14,6 +14,8 @@ class ListViewController: UIViewController {
     private let vm = ListViewModel(service: MovieService())
     private let disposeBag = DisposeBag()
     
+    var vCategory = UIView()
+    var scCategory = UISegmentedControl(items: ["Now Playing", "Upcoming", "Top Rated"])
     var cvMovie = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
 }
