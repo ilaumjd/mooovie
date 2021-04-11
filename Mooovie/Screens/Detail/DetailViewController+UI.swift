@@ -102,7 +102,7 @@ extension DetailViewController {
         ivPoster.translatesAutoresizingMaskIntoConstraints = false
         ivPoster.widthAnchor.constraint(equalToConstant: 140).isActive = true
         ivPoster.centerXAnchor.constraint(equalTo: vScvContent.centerXAnchor).isActive = true
-        ivPoster.topAnchor.constraint(equalTo: vScvContent.safeAreaLayoutGuide.topAnchor, constant: 120).isActive = true
+        ivPoster.topAnchor.constraint(equalTo: vScvContent.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
         ivPoster.heightAnchor.constraint(equalToConstant: 210).isActive = true
     }
     

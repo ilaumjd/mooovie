@@ -12,6 +12,7 @@
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
 		D9D4DFC22622691B00CD82CB /* TrailerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFC12622691B00CD82CB /* TrailerCell.swift */; };
 		D9D4DFC826226A4800CD82CB /* TrailerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFC726226A4800CD82CB /* TrailerViewModel.swift */; };
+		D9D4DFCC2622A83500CD82CB /* UIScrollView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFCB2622A83500CD82CB /* UIScrollView+Ext.swift */; };
 		D9D6C8CA261E86FB00B4D4ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8C9261E86FB00B4D4ED /* AppDelegate.swift */; };
 		D9D6C8CC261E86FB00B4D4ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8CB261E86FB00B4D4ED /* SceneDelegate.swift */; };
 		D9D6C8CE261E86FB00B4D4ED /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C8CD261E86FB00B4D4ED /* ListViewController.swift */; };
@@ -46,6 +47,7 @@
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		D9D4DFC12622691B00CD82CB /* TrailerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCell.swift; sourceTree = "<group>"; };
 		D9D4DFC726226A4800CD82CB /* TrailerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewModel.swift; sourceTree = "<group>"; };
+		D9D4DFCB2622A83500CD82CB /* UIScrollView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Ext.swift"; sourceTree = "<group>"; };
 		D9D6C8C6261E86FB00B4D4ED /* Mooovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D6C8C9261E86FB00B4D4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D6C8CB261E86FB00B4D4ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				D9D6C90A261EC4EE00B4D4ED /* UIColor+Ext.swift */,
 				D9D6C91F261F5F0C00B4D4ED /* UIImageView+Ext.swift */,
 				D9D6C92D261FDF5800B4D4ED /* UIView+Ext.swift */,
+				D9D4DFCB2622A83500CD82CB /* UIScrollView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */,
 				D9D4DFC826226A4800CD82CB /* TrailerViewModel.swift in Sources */,
 				D9D6C90B261EC4EE00B4D4ED /* UIColor+Ext.swift in Sources */,
+				D9D4DFCC2622A83500CD82CB /* UIScrollView+Ext.swift in Sources */,
 				D9D6C91D261F5A5E00B4D4ED /* MovieViewModel.swift in Sources */,
 				D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */,
 				D9D6C924261F610700B4D4ED /* DetailViewController.swift in Sources */,

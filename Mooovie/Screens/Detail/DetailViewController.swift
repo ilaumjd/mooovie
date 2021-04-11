@@ -76,6 +76,12 @@ extension DetailViewController {
         navigationController?.navigationBar.standardAppearance.backgroundColor = .maximumRed
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        view.layoutIfNeeded()
+        scv.update(contentView: vScvContent, height: cvTrailer.frame.maxY + 30 + view.safeAreaInsets.bottom)
+    }
+    
 }
 
 // MARK: MEMBER
@@ -105,7 +111,7 @@ extension DetailViewController {
         scv.rx.didScroll
             .subscribe(onNext: { [weak self] in
                 let offset = self?.scv.contentOffset.y ?? 0
-                let alphaOffset = (self?.ivBackdrop.frame.maxY ?? 0)
+                let alphaOffset = (self?.ivBackdrop.frame.maxY ?? 0) * 0.6
                 let alpha = min(offset / alphaOffset, 1)
                 self?.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.maximumRed.withAlphaComponent(alpha)
             }).disposed(by: disposeBag)
