@@ -130,7 +130,7 @@ extension DetailViewController {
         cvTrailer.rx.setDelegate(self).disposed(by: disposeBag)
         vm.trailerList
             .bind(to: cvTrailer.rx.items(cellIdentifier: TrailerCell.identifier, cellType: TrailerCell.self)) { row, vm, cell in
-                cell.backgroundColor = .brown
+//                cell.backgroundColor = .brown
                 print(vm.name)
             }.disposed(by: disposeBag)
     }
