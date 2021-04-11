@@ -101,7 +101,7 @@ extension DetailViewController {
                     self?.lbLanguage.text = " " + (movie?.language ?? "") + " "
                     self?.lbInfo.text = "Release date: \(movie?.releaseDate ?? "")\n"
                         + "Genres: \(movie?.genres ?? "")"
-                        
+                    
                     self?.lbOverview.text = movie?.overview
                 }
             }).disposed(by: disposeBag)
@@ -110,10 +110,12 @@ extension DetailViewController {
     private func setupRxScrollNavbarTransparency() {
         scv.rx.didScroll
             .subscribe(onNext: { [weak self] in
-                let offset = self?.scv.contentOffset.y ?? 0
-                let alphaOffset = (self?.ivBackdrop.frame.maxY ?? 0) * 0.6
-                let alpha = min(offset / alphaOffset, 1)
-                self?.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.maximumRed.withAlphaComponent(alpha)
+                DispatchQueue.main.async {
+                    let offset = self?.scv.contentOffset.y ?? 0
+                    let alphaOffset = (self?.ivBackdrop.frame.maxY ?? 0) * 0.6
+                    let alpha = min(offset / alphaOffset, 1)
+                    self?.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.maximumRed.withAlphaComponent(alpha)
+                }
             }).disposed(by: disposeBag)
     }
     

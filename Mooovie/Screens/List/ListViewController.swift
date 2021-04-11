@@ -22,7 +22,7 @@ class ListViewController: UIViewController {
 
 // MARK: LIFECYCLE
 extension ListViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -40,7 +40,7 @@ extension ListViewController {
         super.viewDidDisappear(animated)
         navigationController?.navigationBar.prefersLargeTitles = false
     }
-
+    
 }
 
 // MARK: MEMBER
@@ -61,7 +61,9 @@ extension ListViewController {
                 self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         vm.movies.bind(to: cvMovie.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
-            cell.configure(vm: vm)
+            DispatchQueue.main.async {
+                cell.configure(vm: vm)
+            }
         }.disposed(by: disposeBag)
     }
     
