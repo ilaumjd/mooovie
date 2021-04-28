@@ -33,6 +33,8 @@ extension DetailViewController {
         setupLbLanguage()
         setupIvWebsite()
         setupLbWebsite()
+        setupIvBookmark()
+        setupLbBookmark()
         setupLbInfo()
         setupLbOverview()
         setupLbTrailer()
@@ -60,6 +62,9 @@ extension DetailViewController {
         stvHInfo.addArrangedSubview(btWebsite)
         btWebsite.addSubview(ivWebsite)
         btWebsite.addSubview(lbWebsite)
+        stvHInfo.addArrangedSubview(btBookmark)
+        btBookmark.addSubview(ivBookmark)
+        btBookmark.addSubview(lbBookmark)
         vScvContent.addSubview(lbInfo)
         vScvContent.addSubview(lbOverview)
         vScvContent.addSubview(lbTrailer)
@@ -142,6 +147,7 @@ extension DetailViewController {
         vRuntime.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
         vLanguage.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
         btWebsite.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
+        btBookmark.widthAnchor.constraint(equalTo: vVote.widthAnchor, multiplier: 1).isActive = true
     }
     
     private func setupIvVote() {
@@ -236,6 +242,28 @@ extension DetailViewController {
         lbWebsite.translatesAutoresizingMaskIntoConstraints = false
         lbWebsite.centerXAnchor.constraint(equalTo: btWebsite.centerXAnchor).isActive = true
         lbWebsite.topAnchor.constraint(equalTo: ivWebsite.bottomAnchor).isActive = true
+    }
+    
+    private func setupIvBookmark() {
+        ivBookmark.image = UIImage(systemName: "bookmark")
+        
+        ivBookmark.translatesAutoresizingMaskIntoConstraints = false
+        ivBookmark.centerXAnchor.constraint(equalTo: btBookmark.centerXAnchor).isActive = true
+        ivBookmark.centerYAnchor.constraint(equalTo: btBookmark.centerYAnchor, constant: -10).isActive = true
+        ivBookmark.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        ivBookmark.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    }
+    
+    private func setupLbBookmark() {
+        lbBookmark.text = "Add to\nBookmark"
+        lbBookmark.textAlignment = .center
+        lbBookmark.textColor = .systemBlue
+        lbBookmark.numberOfLines = 2
+        lbBookmark.font = .rounded(ofSize: 10, weight: .regular)
+        
+        lbBookmark.translatesAutoresizingMaskIntoConstraints = false
+        lbBookmark.centerXAnchor.constraint(equalTo: btBookmark.centerXAnchor).isActive = true
+        lbBookmark.topAnchor.constraint(equalTo: ivBookmark.bottomAnchor).isActive = true
     }
     
     private func setupLbInfo() {
