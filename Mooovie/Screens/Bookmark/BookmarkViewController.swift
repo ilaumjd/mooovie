@@ -47,7 +47,7 @@ extension BookmarkViewController {
 //                self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         let a = BehaviorRelay<[String]>(value: ["","","",""])
-        a.bind(to: cvBookmark.rx.items(cellIdentifier: MovieCell.identifier, cellType: MovieCell.self)) { row, vm, cell in
+        a.bind(to: cvBookmark.rx.items(cellIdentifier: BookmarkCell.identifier, cellType: BookmarkCell.self)) { row, vm, cell in
             DispatchQueue.main.async {
 //                cell.configure(vm: vm)
             }
@@ -60,7 +60,7 @@ extension BookmarkViewController {
 extension BookmarkViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 40, height: 150)
+        return CGSize(width: collectionView.frame.width - 40, height: 70)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

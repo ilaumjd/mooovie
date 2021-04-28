@@ -14,7 +14,7 @@ extension BookmarkViewController {
     }
     
     func setupUI() {
-        self.title = "Mooovie"
+        self.title = "Bookmarks"
         
         view.addSubview(cvBookmark)
         
@@ -24,7 +24,7 @@ extension BookmarkViewController {
     private func setupCvBookmark() {
         cvBookmark.backgroundColor = .pureWhite
         cvBookmark.showsVerticalScrollIndicator = false
-        cvBookmark.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
+        cvBookmark.register(BookmarkCell.self, forCellWithReuseIdentifier: BookmarkCell.identifier)
         
         cvBookmark.translatesAutoresizingMaskIntoConstraints = false
         cvBookmark.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
