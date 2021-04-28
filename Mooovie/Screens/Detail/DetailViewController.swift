@@ -61,6 +61,7 @@ extension DetailViewController {
         setupRxScrollNavbarTransparency()
         setupRxWebsiteTap()
         setupRxBookmarkTap()
+        setupRxBookmarkUpdate()
         setupRxTrailerList()
         setupRxDownloadPoster()
     }
@@ -155,6 +156,23 @@ extension DetailViewController {
             .subscribe(onNext: { [weak self] in
                 DispatchQueue.main.async {
                     self?.btBookmark.alpha = 0.5
+                }
+            }).disposed(by: disposeBag)
+    }
+    
+    private func setupRxBookmarkUpdate() {
+        vm.isBookmarked
+            .subscribe(onNext: { [weak self] isBookmarked in
+                DispatchQueue.main.async {
+                    if isBookmarked {
+                        self?.ivBookmark.image = UIImage(systemName: "bookmark.fill")
+                        self?.ivBookmark.tintColor = .orange
+                        self?.lbBookmark.text = "Book\nmarked"
+                    } else {
+                        self?.ivBookmark.image = UIImage(systemName: "bookmark")
+                        self?.ivBookmark.tintColor = .systemBlue
+                        self?.lbBookmark.text = "Add to\nBookmark"
+                    }
                 }
             }).disposed(by: disposeBag)
     }

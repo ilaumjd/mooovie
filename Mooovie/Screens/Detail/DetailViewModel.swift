@@ -17,6 +17,7 @@ class DetailViewModel {
     let movieId = PublishSubject<Int>()
     let movie = BehaviorRelay<MovieViewModel?>(value: nil)
     let trailerList = BehaviorRelay<[TrailerViewModel]>(value: [])
+    let isBookmarked = BehaviorRelay<Bool>(value: false)
     
     init(service: MovieServiceProtocol) {
         self.service = service
@@ -56,7 +57,8 @@ extension DetailViewModel {
     
     
     private func checkBookmarked(movieId: Int) {
-       print("bookmarked:",  CoreDataManager.shared.isBookmarked(id: movieId))
+        let isBookmarked = CoreDataManager.shared.isBookmarked(id: movieId)
+        self.isBookmarked.accept(isBookmarked)
     }
     
     func bookmark() {
