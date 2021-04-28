@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D9B58A60263948D10028BCB3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A5E263948D10028BCB3 /* Model.xcdatamodeld */; };
 		D9B58A6426394B5F0028BCB3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6326394B5F0028BCB3 /* CoreDataManager.swift */; };
+		D9B58A682639502E0028BCB3 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */; };
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
 		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
@@ -47,6 +48,7 @@
 		AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.release.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.release.xcconfig"; sourceTree = "<group>"; };
 		D9B58A5F263948D10028BCB3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D9B58A6326394B5F0028BCB3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		D9B58A662639501A0028BCB3 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
 		D9D4DF962621C0E700CD82CB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 		D9D6C8E0261E8B6F00B4D4ED /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D9B58A662639501A0028BCB3 /* Bookmark */,
 				D9D6C922261F60F600B4D4ED /* Detail */,
 				D9D6C8E1261E8B7400B4D4ED /* List */,
 			);
@@ -355,6 +366,7 @@
 				D9D6C8E5261E902600B4D4ED /* UIFont+Ext.swift in Sources */,
 				D9D6C908261EBCDE00B4D4ED /* MovieCell.swift in Sources */,
 				D9B58A60263948D10028BCB3 /* Model.xcdatamodeld in Sources */,
+				D9B58A682639502E0028BCB3 /* BookmarkViewController.swift in Sources */,
 				D9D6C8EC261EA7BD00B4D4ED /* ListViewModel.swift in Sources */,
 				D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */,
 				D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */,

@@ -28,6 +28,7 @@ extension ListViewController {
         setupUI()
         setupRxSelectCategory()
         setupRxListMovie()
+        setupRxBookmark()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +66,15 @@ extension ListViewController {
                 cell.configure(vm: vm)
             }
         }.disposed(by: disposeBag)
+    }
+    
+    private func setupRxBookmark() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bookmark.fill"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem?.rx.tap
+            .subscribe(onNext: { [weak self] in
+                let vc = BookmarkViewController.create()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: disposeBag)
     }
     
 }

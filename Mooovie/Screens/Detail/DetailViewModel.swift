@@ -40,7 +40,6 @@ extension DetailViewModel {
             if let movie = movie {
                 self.movie.accept(MovieViewModel(model: movie))
                 CoreDataManager.shared.addBookmark(id: movie.id ?? 0, title: movie.title ?? "", poster: movie.posterPath ?? "")
-                print(CoreDataManager.shared.getBookmarks())
             }
         }
     }
