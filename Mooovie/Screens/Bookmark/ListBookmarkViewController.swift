@@ -31,10 +31,13 @@ extension ListBookmarkViewController {
         super.viewDidLoad()
         setupUI()
         setupRxListMovie()
-        
-        vm.fetchBookmarks()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        vm.fetchBookmarks()
+    }
+
 }
 
 
@@ -45,8 +48,8 @@ extension ListBookmarkViewController {
         cvBookmark.rx.setDelegate(self).disposed(by: disposeBag)
         cvBookmark.rx.itemSelected
             .subscribe(onNext: { [weak self] indexPath in
-//                let vc = DetailViewController.create(movieId: self?.vm.movies.value[indexPath.row].id)
-//                self?.navigationController?.pushViewController(vc, animated: true)
+                let vc = DetailViewController.create(movieId: self?.vm.bookmarks.value[indexPath.row].id)
+                self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         vm.bookmarks.bind(to: cvBookmark.rx.items(cellIdentifier: BookmarkCell.identifier, cellType: BookmarkCell.self)) { row, vm, cell in
             DispatchQueue.main.async {
