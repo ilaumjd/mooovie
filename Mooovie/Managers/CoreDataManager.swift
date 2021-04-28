@@ -28,7 +28,7 @@ class CoreDataManager {
         
         do {
             try self.moc.save()
-        } catch let error {
+        } catch {
             print(error)
         }
     }
@@ -39,13 +39,13 @@ class CoreDataManager {
         request.returnsObjectsAsFaults = false
         do {
             bookmarks = try self.moc.fetch(request)
-        } catch let error {
+        } catch {
             print(error)
         }
         return bookmarks
     }
     
-    func isBookmarked(id: Int) -> Bool {
+    func getBookmarkById(id: Int) -> [Bookmark] {
         let request: NSFetchRequest<Bookmark> = Bookmark.fetchRequest()
         request.predicate = NSPredicate(format: "id = %d", id)
         
@@ -56,7 +56,20 @@ class CoreDataManager {
         catch {
             print(error)
         }
+        return bookmarks
+    }
+    
+    func isBookmarked(id: Int) -> Bool {
+        let bookmarks = getBookmarkById(id: id)
         return bookmarks.count > 0
+    }
+    
+    func deleteBookmark(id: Int) {
+        let bookmarks = getBookmarkById(id: id)
+        
+        for bookmark in bookmarks {
+            self.moc.delete(bookmark)
+        }
     }
     
 }

@@ -63,7 +63,12 @@ extension DetailViewModel {
     
     func bookmark() {
         if let movie = self.movie.value {
-            CoreDataManager.shared.addBookmark(id: movie.id, title: movie.title, poster: movie.poster)
+            if !self.isBookmarked.value {
+                CoreDataManager.shared.addBookmark(id: movie.id, title: movie.title, poster: movie.poster)
+            } else {
+                CoreDataManager.shared.deleteBookmark(id: movie.id)
+            }
+            self.checkBookmarked(movieId: movie.id)
         }
     }
     
