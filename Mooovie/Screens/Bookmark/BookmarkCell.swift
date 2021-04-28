@@ -25,7 +25,17 @@ class BookmarkCell: UICollectionViewCell {
     
 }
 
-// UI
+// MARK: MEMBER
+extension BookmarkCell {
+    
+    func configure(vm: BookmarkViewModel) {
+        ivPoster.from(vm.poster)
+        lbTitle.text = vm.title
+    }
+    
+}
+
+// MARK: UI
 extension BookmarkCell {
     
     func setupUI() {

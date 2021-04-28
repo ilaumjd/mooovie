@@ -10,7 +10,7 @@ import RxCocoa
 
 class ListBookmarkViewModel {
     
-    let bookmarks = BehaviorRelay<[Bookmark]>(value: [])
+    let bookmarks = BehaviorRelay<[BookmarkViewModel]>(value: [])
     
 }
 
@@ -18,7 +18,7 @@ extension ListBookmarkViewModel {
     
     func fetchBookmarks() {
         let bookmarks = CoreDataManager.shared.getBookmarks()
-        self.bookmarks.accept(bookmarks)
+        self.bookmarks.accept(bookmarks.map(BookmarkViewModel.init))
     }
     
 }

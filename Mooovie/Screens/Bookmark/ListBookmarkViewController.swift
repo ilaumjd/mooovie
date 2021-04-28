@@ -48,12 +48,9 @@ extension ListBookmarkViewController {
 //                let vc = DetailViewController.create(movieId: self?.vm.movies.value[indexPath.row].id)
 //                self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
-//        let a = BehaviorRelay<[String]>(value: ["","","",""])
         vm.bookmarks.bind(to: cvBookmark.rx.items(cellIdentifier: BookmarkCell.identifier, cellType: BookmarkCell.self)) { row, vm, cell in
             DispatchQueue.main.async {
-                cell.ivPoster.from(vm.poster ?? "")
-                cell.lbTitle.text = vm.title
-//                cell.configure(vm: vm)
+                cell.configure(vm: vm)
             }
         }.disposed(by: disposeBag)
     }
