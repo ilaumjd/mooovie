@@ -28,18 +28,13 @@ class DetailViewModel {
             .subscribe(onNext: { [weak self] movieId in
                 self?.fetchDetail(movieId: movieId)
                 self?.fetchTrailers(movieId: movieId)
+                self?.checkBookmarked(movieId: movieId)
             }).disposed(by: disposeBag)
     }
     
 }
 
 extension DetailViewModel {
-    
-    func bookmark() {
-        if let movie = self.movie.value {
-            CoreDataManager.shared.addBookmark(id: movie.id, title: movie.title, poster: movie.poster)
-        }
-    }
     
     private func fetchDetail(movieId: Int) {
         service.fetchMovieDetail(movieId: movieId) { movie in
@@ -56,6 +51,17 @@ extension DetailViewModel {
                                             .filter { ($0.site ?? "") == "YouTube" }
                                             .map(TrailerViewModel.init))
             }
+        }
+    }
+    
+    
+    private func checkBookmarked(movieId: Int) {
+       print("bookmarked:",  CoreDataManager.shared.isBookmarked(id: movieId))
+    }
+    
+    func bookmark() {
+        if let movie = self.movie.value {
+            CoreDataManager.shared.addBookmark(id: movie.id, title: movie.title, poster: movie.poster)
         }
     }
     

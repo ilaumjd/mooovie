@@ -37,14 +37,26 @@ class CoreDataManager {
         var bookmarks = [Bookmark]()
         let request: NSFetchRequest<Bookmark> = Bookmark.fetchRequest()
         request.returnsObjectsAsFaults = false
-        
         do {
             bookmarks = try self.moc.fetch(request)
         } catch let error {
             print(error)
         }
-        
         return bookmarks
+    }
+    
+    func isBookmarked(id: Int) -> Bool {
+        let request: NSFetchRequest<Bookmark> = Bookmark.fetchRequest()
+        request.predicate = NSPredicate(format: "id = %d", id)
+        
+        var bookmarks = [Bookmark]()
+        do {
+            bookmarks = try self.moc.fetch(request)
+        }
+        catch {
+            print(error)
+        }
+        return bookmarks.count > 0
     }
     
 }
