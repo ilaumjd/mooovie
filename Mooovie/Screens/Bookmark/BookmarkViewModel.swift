@@ -22,7 +22,7 @@ extension BookmarkViewModel {
     }
     
     var poster: String {
-        Constants.API.baseImageURL + (model.poster ?? "")
+        model.poster ?? ""
     }
     
 }

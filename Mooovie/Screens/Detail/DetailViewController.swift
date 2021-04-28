@@ -60,6 +60,7 @@ extension DetailViewController {
         setupRxMovieDetail()
         setupRxScrollNavbarTransparency()
         setupRxWebsiteTap()
+        setupRxBookmarkTap()
         setupRxTrailerList()
         setupRxDownloadPoster()
     }
@@ -137,6 +138,23 @@ extension DetailViewController {
             .subscribe(onNext: { [weak self] in
                 DispatchQueue.main.async {
                     self?.btWebsite.alpha = 0.5
+                }
+            }).disposed(by: disposeBag)
+    }
+    
+    private func setupRxBookmarkTap() {
+        btBookmark.rx.tap
+            .subscribe(onNext: { [weak self] in
+                DispatchQueue.main.async {
+                    self?.btBookmark.alpha = 1
+                    //
+                    self?.vm.bookmark()
+                }
+            }).disposed(by: disposeBag)
+        btBookmark.rx.controlEvent(.touchDown)
+            .subscribe(onNext: { [weak self] in
+                DispatchQueue.main.async {
+                    self?.btBookmark.alpha = 0.5
                 }
             }).disposed(by: disposeBag)
     }

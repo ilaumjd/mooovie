@@ -35,11 +35,16 @@ class DetailViewModel {
 
 extension DetailViewModel {
     
+    func bookmark() {
+        if let movie = self.movie.value {
+            CoreDataManager.shared.addBookmark(id: movie.id, title: movie.title, poster: movie.poster)
+        }
+    }
+    
     private func fetchDetail(movieId: Int) {
         service.fetchMovieDetail(movieId: movieId) { movie in
             if let movie = movie {
                 self.movie.accept(MovieViewModel(model: movie))
-                CoreDataManager.shared.addBookmark(id: movie.id ?? 0, title: movie.title ?? "", poster: movie.posterPath ?? "")
             }
         }
     }
