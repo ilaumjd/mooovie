@@ -72,7 +72,7 @@ extension ListViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bookmark.fill"), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem?.rx.tap
             .subscribe(onNext: { [weak self] in
-                let vc = BookmarkViewController.create()
+                let vc = ListBookmarkViewController.create()
                 self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
     }

@@ -1,5 +1,5 @@
 //
-//  BookmarkViewController+UI.swift
+//  ListBookmarkViewController+UI.swift
 //  Mooovie
 //
 //  Created by aku pintar indonesia on 28/04/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension BookmarkViewController {
+extension ListBookmarkViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent

@@ -1,5 +1,5 @@
 //
-//  BookmarkViewController.swift
+//  ListBookmarkViewController.swift
 //  Mooovie
 //
 //  Created by aku pintar indonesia on 28/04/21.
@@ -9,15 +9,15 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class BookmarkViewController: UIViewController {
+class ListBookmarkViewController: UIViewController {
     
-    private let vm = BookmarkViewModel()
+    private let vm = ListBookmarkViewModel()
     private let disposeBag = DisposeBag()
     
     var cvBookmark = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    static func create() -> BookmarkViewController {
-        let vc = BookmarkViewController()
+    static func create() -> ListBookmarkViewController {
+        let vc = ListBookmarkViewController()
         return vc
     }
     
@@ -25,7 +25,7 @@ class BookmarkViewController: UIViewController {
 
 
 // MARK: LIFECYCLE
-extension BookmarkViewController {
+extension ListBookmarkViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ extension BookmarkViewController {
 
 
 // MARK: MEMBER
-extension BookmarkViewController {
+extension ListBookmarkViewController {
     
     private func setupRxListMovie() {
         cvBookmark.rx.setDelegate(self).disposed(by: disposeBag)
@@ -61,7 +61,7 @@ extension BookmarkViewController {
 }
 
 // MARK: COLLECTION VIEW
-extension BookmarkViewController: UICollectionViewDelegateFlowLayout {
+extension ListBookmarkViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width - 40, height: 70)
