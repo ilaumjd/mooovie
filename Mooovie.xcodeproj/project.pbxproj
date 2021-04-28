@@ -10,6 +10,7 @@
 		D9B58A60263948D10028BCB3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A5E263948D10028BCB3 /* Model.xcdatamodeld */; };
 		D9B58A6426394B5F0028BCB3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6326394B5F0028BCB3 /* CoreDataManager.swift */; };
 		D9B58A682639502E0028BCB3 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */; };
+		D9B58A6C263952E00028BCB3 /* BookmarkViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6B263952E00028BCB3 /* BookmarkViewController+UI.swift */; };
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
 		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
@@ -49,6 +50,7 @@
 		D9B58A5F263948D10028BCB3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D9B58A6326394B5F0028BCB3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		D9B58A6B263952E00028BCB3 /* BookmarkViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkViewController+UI.swift"; sourceTree = "<group>"; };
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */,
+				D9B58A6B263952E00028BCB3 /* BookmarkViewController+UI.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				D9D6C902261EB5A200B4D4ED /* Movie.swift in Sources */,
 				D9D4DFC826226A4800CD82CB /* TrailerViewModel.swift in Sources */,
 				D9D6C90B261EC4EE00B4D4ED /* UIColor+Ext.swift in Sources */,
+				D9B58A6C263952E00028BCB3 /* BookmarkViewController+UI.swift in Sources */,
 				D9D4DFCC2622A83500CD82CB /* UIScrollView+Ext.swift in Sources */,
 				D9D6C91D261F5A5E00B4D4ED /* MovieViewModel.swift in Sources */,
 				D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */,
