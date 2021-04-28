@@ -12,6 +12,7 @@
 		D9B58A682639502E0028BCB3 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */; };
 		D9B58A6C263952E00028BCB3 /* BookmarkViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6B263952E00028BCB3 /* BookmarkViewController+UI.swift */; };
 		D9B58A70263955370028BCB3 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6F263955370028BCB3 /* BookmarkCell.swift */; };
+		D9B58A73263957280028BCB3 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A72263957280028BCB3 /* BookmarkViewModel.swift */; };
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
 		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
@@ -53,6 +54,7 @@
 		D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		D9B58A6B263952E00028BCB3 /* BookmarkViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkViewController+UI.swift"; sourceTree = "<group>"; };
 		D9B58A6F263955370028BCB3 /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
+		D9B58A72263957280028BCB3 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				D9B58A672639502E0028BCB3 /* BookmarkViewController.swift */,
 				D9B58A6B263952E00028BCB3 /* BookmarkViewController+UI.swift */,
 				D9B58A6F263955370028BCB3 /* BookmarkCell.swift */,
+				D9B58A72263957280028BCB3 /* BookmarkViewModel.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				D9D6C905261EBA8200B4D4ED /* MovieList.swift in Sources */,
 				D9D6C924261F610700B4D4ED /* DetailViewController.swift in Sources */,
 				D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */,
+				D9B58A73263957280028BCB3 /* BookmarkViewModel.swift in Sources */,
 				D9D6C8CE261E86FB00B4D4ED /* ListViewController.swift in Sources */,
 				D9D6C92E261FDF5800B4D4ED /* UIView+Ext.swift in Sources */,
 				D9D6C8CA261E86FB00B4D4ED /* AppDelegate.swift in Sources */,

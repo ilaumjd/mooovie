@@ -36,6 +36,7 @@ class CoreDataManager {
     func getBookmarks() -> [Bookmark] {
         var bookmarks = [Bookmark]()
         let request: NSFetchRequest<Bookmark> = Bookmark.fetchRequest()
+        request.returnsObjectsAsFaults = false
         
         do {
             bookmarks = try self.moc.fetch(request)

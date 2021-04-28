@@ -11,6 +11,7 @@ import RxCocoa
 
 class BookmarkViewController: UIViewController {
     
+    private let vm = BookmarkViewModel()
     private let disposeBag = DisposeBag()
     
     var cvBookmark = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -28,9 +29,10 @@ extension BookmarkViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(CoreDataManager.shared.getBookmarks())
         setupUI()
         setupRxListMovie()
+        
+        vm.fetchBookmarks()
     }
     
 }
@@ -46,9 +48,11 @@ extension BookmarkViewController {
 //                let vc = DetailViewController.create(movieId: self?.vm.movies.value[indexPath.row].id)
 //                self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
-        let a = BehaviorRelay<[String]>(value: ["","","",""])
-        a.bind(to: cvBookmark.rx.items(cellIdentifier: BookmarkCell.identifier, cellType: BookmarkCell.self)) { row, vm, cell in
+//        let a = BehaviorRelay<[String]>(value: ["","","",""])
+        vm.bookmarks.bind(to: cvBookmark.rx.items(cellIdentifier: BookmarkCell.identifier, cellType: BookmarkCell.self)) { row, vm, cell in
             DispatchQueue.main.async {
+                cell.ivPoster.from(vm.poster ?? "")
+                cell.lbTitle.text = vm.title
 //                cell.configure(vm: vm)
             }
         }.disposed(by: disposeBag)
