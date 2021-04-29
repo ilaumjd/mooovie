@@ -77,4 +77,14 @@ extension CoreDataManager {
         }
     }
     
+    func clearBookmarks() {
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: Bookmark.fetchRequest())
+        do {
+            try self.moc.execute(deleteRequest)
+        } catch {
+            print(error)
+        }
+        
+    }
+    
 }
