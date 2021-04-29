@@ -20,6 +20,11 @@ class CoreDataManager {
         self.moc = appDelegate.persistentContainer.viewContext
     }
     
+}
+
+// MARK: BOOKMARK
+extension CoreDataManager {
+    
     func addBookmark(id: Int, title: String, poster: String) {
         let bookmark = Bookmark(context: self.moc)
         bookmark.id = Int64(id)
