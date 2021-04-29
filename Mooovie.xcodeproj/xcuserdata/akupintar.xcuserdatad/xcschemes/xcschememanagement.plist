@@ -9,6 +9,24 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>MooovieTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D9B58A80263A64B50028BCB3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9D6C8C5261E86FB00B4D4ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -14,6 +14,7 @@
 		D9B58A70263955370028BCB3 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6F263955370028BCB3 /* BookmarkCell.swift */; };
 		D9B58A73263957280028BCB3 /* ListBookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A72263957280028BCB3 /* ListBookmarkViewModel.swift */; };
 		D9B58A78263959260028BCB3 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A77263959260028BCB3 /* BookmarkViewModel.swift */; };
+		D9B58A84263A64B50028BCB3 /* MooovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A83263A64B50028BCB3 /* MooovieTests.swift */; };
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
 		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
@@ -46,6 +47,16 @@
 		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D9B58A86263A64B50028BCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9D6C8BE261E86FB00B4D4ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9D6C8C5261E86FB00B4D4ED;
+			remoteInfo = Mooovie;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.debug.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +68,9 @@
 		D9B58A6F263955370028BCB3 /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
 		D9B58A72263957280028BCB3 /* ListBookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBookmarkViewModel.swift; sourceTree = "<group>"; };
 		D9B58A77263959260028BCB3 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
+		D9B58A81263A64B50028BCB3 /* MooovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B58A83263A64B50028BCB3 /* MooovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooovieTests.swift; sourceTree = "<group>"; };
+		D9B58A85263A64B50028BCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
@@ -91,6 +105,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D9B58A7E263A64B50028BCB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D9D6C8C3261E86FB00B4D4ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +160,15 @@
 			path = Bookmark;
 			sourceTree = "<group>";
 		};
+		D9B58A82263A64B50028BCB3 /* MooovieTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B58A83263A64B50028BCB3 /* MooovieTests.swift */,
+				D9B58A85263A64B50028BCB3 /* Info.plist */,
+			);
+			path = MooovieTests;
+			sourceTree = "<group>";
+		};
 		D9D4DF962621C0E700CD82CB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D9D6C8C8261E86FB00B4D4ED /* Mooovie */,
+				D9B58A82263A64B50028BCB3 /* MooovieTests */,
 				D9D6C8C7261E86FB00B4D4ED /* Products */,
 				5FC7E20E4A0DE75A9CA00DFE /* Pods */,
 				19538BDF1B66EB9AD6049CD4 /* Frameworks */,
@@ -169,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				D9D6C8C6261E86FB00B4D4ED /* Mooovie.app */,
+				D9B58A81263A64B50028BCB3 /* MooovieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +296,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D9B58A80263A64B50028BCB3 /* MooovieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B58A8A263A64B50028BCB3 /* Build configuration list for PBXNativeTarget "MooovieTests" */;
+			buildPhases = (
+				D9B58A7D263A64B50028BCB3 /* Sources */,
+				D9B58A7E263A64B50028BCB3 /* Frameworks */,
+				D9B58A7F263A64B50028BCB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B58A87263A64B50028BCB3 /* PBXTargetDependency */,
+			);
+			name = MooovieTests;
+			productName = MooovieTests;
+			productReference = D9B58A81263A64B50028BCB3 /* MooovieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D9D6C8C5261E86FB00B4D4ED /* Mooovie */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9D6C8DA261E86FF00B4D4ED /* Build configuration list for PBXNativeTarget "Mooovie" */;
@@ -289,9 +339,13 @@
 		D9D6C8BE261E86FB00B4D4ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					D9B58A80263A64B50028BCB3 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = D9D6C8C5261E86FB00B4D4ED;
+					};
 					D9D6C8C5261E86FB00B4D4ED = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
@@ -311,11 +365,19 @@
 			projectRoot = "";
 			targets = (
 				D9D6C8C5261E86FB00B4D4ED /* Mooovie */,
+				D9B58A80263A64B50028BCB3 /* MooovieTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D9B58A7F263A64B50028BCB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D9D6C8C4261E86FB00B4D4ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +432,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D9B58A7D263A64B50028BCB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B58A84263A64B50028BCB3 /* MooovieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D9D6C8C2261E86FB00B4D4ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +483,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D9B58A87263A64B50028BCB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9D6C8C5261E86FB00B4D4ED /* Mooovie */;
+			targetProxy = D9B58A86263A64B50028BCB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D9D6C8D4261E86FF00B4D4ED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -425,6 +503,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D9B58A88263A64B50028BCB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S49G677PMU;
+				INFOPLIST_FILE = MooovieTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aulmajid.MooovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mooovie.app/Mooovie";
+			};
+			name = Debug;
+		};
+		D9B58A89263A64B50028BCB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S49G677PMU;
+				INFOPLIST_FILE = MooovieTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aulmajid.MooovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mooovie.app/Mooovie";
+			};
+			name = Release;
+		};
 		D9D6C8D8261E86FF00B4D4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -584,6 +704,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D9B58A8A263A64B50028BCB3 /* Build configuration list for PBXNativeTarget "MooovieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B58A88263A64B50028BCB3 /* Debug */,
+				D9B58A89263A64B50028BCB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D9D6C8C1261E86FB00B4D4ED /* Build configuration list for PBXProject "Mooovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
