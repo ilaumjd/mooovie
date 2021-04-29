@@ -13,6 +13,7 @@ class BookmarkCell: UICollectionViewCell {
     
     var ivPoster = UIImageView()
     var lbTitle = UILabel()
+    var btDelete = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,9 +42,11 @@ extension BookmarkCell {
     func setupUI() {
         self.addSubview(ivPoster)
         self.addSubview(lbTitle)
+        self.addSubview(btDelete)
         
-        self.setupIvPoster()
+        setupIvPoster()
         setupLbTitle()
+        setupBtDelete()
     }
     
     private func setupIvPoster() {
@@ -61,14 +64,25 @@ extension BookmarkCell {
     
     private func setupLbTitle() {
         lbTitle.text = "Godzilla and Kong Kong Kong Kong Kong"
-        lbTitle.numberOfLines = 1
+        lbTitle.numberOfLines = 2
         lbTitle.font = .rounded(ofSize: 17, weight: .bold)
         lbTitle.textColor = .prussianBlue
         
         lbTitle.translatesAutoresizingMaskIntoConstraints = false
         lbTitle.leadingAnchor.constraint(equalTo: ivPoster.trailingAnchor, constant: 10).isActive = true
-        lbTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        lbTitle.trailingAnchor.constraint(equalTo: btDelete.leadingAnchor, constant: -10).isActive = true
         lbTitle.centerYAnchor.constraint(equalTo: ivPoster.centerYAnchor).isActive = true
+    }
+    
+    private func setupBtDelete() {
+        btDelete.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
+        btDelete.tintColor = .maximumRed
+        
+        btDelete.translatesAutoresizingMaskIntoConstraints = false
+        btDelete.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        btDelete.widthAnchor.constraint(equalTo: btDelete.heightAnchor).isActive = true
+        btDelete.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8).isActive = true
+        btDelete.centerYAnchor.constraint(equalTo: lbTitle.centerYAnchor).isActive = true
     }
 
 }
