@@ -1,16 +1,15 @@
 //
-//  MooovieTests.swift
+//  BookmarkTests.swift
 //  MooovieTests
 //
 //  Created by aku pintar indonesia on 29/04/21.
 //
 
 import XCTest
-
 @testable import Mooovie
 
-class MooovieTests: XCTestCase {
-    
+class BookmarkTests: XCTestCase {
+
     let id = 1234
     let title = "Mortal Kombat"
     let poster = "https://..."

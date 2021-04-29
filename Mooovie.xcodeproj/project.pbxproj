@@ -14,7 +14,8 @@
 		D9B58A70263955370028BCB3 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6F263955370028BCB3 /* BookmarkCell.swift */; };
 		D9B58A73263957280028BCB3 /* ListBookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A72263957280028BCB3 /* ListBookmarkViewModel.swift */; };
 		D9B58A78263959260028BCB3 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A77263959260028BCB3 /* BookmarkViewModel.swift */; };
-		D9B58A84263A64B50028BCB3 /* MooovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A83263A64B50028BCB3 /* MooovieTests.swift */; };
+		D9B58A8E263A69210028BCB3 /* BookmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A8D263A69210028BCB3 /* BookmarkTests.swift */; };
+		D9B58A94263A695F0028BCB3 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A93263A695F0028BCB3 /* MovieTests.swift */; };
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
 		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
@@ -69,8 +70,9 @@
 		D9B58A72263957280028BCB3 /* ListBookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBookmarkViewModel.swift; sourceTree = "<group>"; };
 		D9B58A77263959260028BCB3 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		D9B58A81263A64B50028BCB3 /* MooovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9B58A83263A64B50028BCB3 /* MooovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooovieTests.swift; sourceTree = "<group>"; };
 		D9B58A85263A64B50028BCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B58A8D263A69210028BCB3 /* BookmarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTests.swift; sourceTree = "<group>"; };
+		D9B58A93263A695F0028BCB3 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
@@ -163,8 +165,9 @@
 		D9B58A82263A64B50028BCB3 /* MooovieTests */ = {
 			isa = PBXGroup;
 			children = (
-				D9B58A83263A64B50028BCB3 /* MooovieTests.swift */,
 				D9B58A85263A64B50028BCB3 /* Info.plist */,
+				D9B58A8D263A69210028BCB3 /* BookmarkTests.swift */,
+				D9B58A93263A695F0028BCB3 /* MovieTests.swift */,
 			);
 			path = MooovieTests;
 			sourceTree = "<group>";
@@ -436,7 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B58A84263A64B50028BCB3 /* MooovieTests.swift in Sources */,
+				D9B58A94263A695F0028BCB3 /* MovieTests.swift in Sources */,
+				D9B58A8E263A69210028BCB3 /* BookmarkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
