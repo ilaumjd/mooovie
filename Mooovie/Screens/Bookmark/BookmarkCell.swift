@@ -6,18 +6,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class BookmarkCell: UICollectionViewCell {
     
     static let identifier = "BookmarkCell"
     
+    private let disposeBag = DisposeBag()
+    
     var ivPoster = UIImageView()
     var lbTitle = UILabel()
     var btDelete = UIButton()
     
+    var vm: BookmarkViewModel?
+    var didDeleteSuccess: (() -> ())?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        setupRxDelete()
     }
     
     required init?(coder: NSCoder) {
@@ -30,8 +38,18 @@ class BookmarkCell: UICollectionViewCell {
 extension BookmarkCell {
     
     func configure(vm: BookmarkViewModel) {
+        self.vm = vm
         ivPoster.from(vm.poster)
         lbTitle.text = vm.title
+    }
+    
+    func setupRxDelete() {
+        btDelete.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.vm?.delete {
+                    self?.didDeleteSuccess?()
+                }
+            }).disposed(by: disposeBag)
     }
     
 }

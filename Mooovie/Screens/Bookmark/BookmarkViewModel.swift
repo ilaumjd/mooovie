@@ -26,3 +26,12 @@ extension BookmarkViewModel {
     }
     
 }
+
+extension BookmarkViewModel {
+    
+    func delete(completion: @escaping (() -> ())) {
+        CoreDataManager.shared.deleteBookmark(id: id)
+        completion()
+    }
+    
+}
