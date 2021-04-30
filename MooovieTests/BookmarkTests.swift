@@ -10,12 +10,15 @@ import XCTest
 
 class BookmarkTests: XCTestCase {
 
-    let id = 1234
-    let title = "Mortal Kombat"
-    let poster = "https://..."
+    var id: Int!
+    var title: String!
+    var poster: String!
     
     override func setUp() {
         super.setUp()
+        id = 1234
+        title = "Mortal Kombat"
+        poster = "https://..."
     }
     
     override func tearDown() {

@@ -14,14 +14,19 @@ import RxTest
 
 class MovieTests: XCTestCase {
     
+    var service: MovieServiceProtocol!
     
+    override func setUp() {
+        super.setUp()
+        service = MockMovieService()
+    }
 
     func test_selectCategory() {
         let scheduler = TestScheduler(initialClock: 0)
         let testObserver = scheduler.createObserver(String.self)
         let disposeBag = DisposeBag()
         
-        let vm = ListViewModel(service: MockMovieService())
+        let vm = ListViewModel(service: service)
         
         vm.category
             .skip(1)
@@ -45,7 +50,7 @@ class MovieTests: XCTestCase {
     }
     
     func test_assignMovie() {
-        let vm = DetailViewModel(service: MockMovieService())
+        let vm = DetailViewModel(service: service)
         
         XCTAssertNil(vm.movie.value)
         vm.movieId.onNext(1234)
@@ -53,7 +58,7 @@ class MovieTests: XCTestCase {
     }
     
     func test_onlyShowTrailerFromYoutube() {
-        let vm = DetailViewModel(service: MockMovieService())
+        let vm = DetailViewModel(service: service)
         
         vm.movieId.onNext(1234)
         
