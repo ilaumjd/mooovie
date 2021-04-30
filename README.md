@@ -2,12 +2,14 @@
 
 
 Simple weather app built using:
- - **Xcode** 12.0.1 (12A7300)
+ - **Xcode** 12.4 (12D4e)
  - **Swift** 5
  - **UIKit** (programmatically, no storyboard / interface builder)
  - **RxSwift**
  - **MVVM**
  - **The Movie Database (TMDB) API**
+ - **Core Data**
+ - **Unit test included**
 
 
 **Screenshots:**
@@ -25,3 +27,4 @@ Simple weather app built using:
  - Download and save poster
  - Visit official website 
  - Watch trailers
+ - Bookmark your favorite movies
