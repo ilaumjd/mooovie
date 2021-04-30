@@ -7,6 +7,7 @@
 
 import XCTest
 import RxSwift
+import RxCocoa
 import RxTest
 
 @testable import Mooovie
@@ -40,6 +41,16 @@ class MovieTests: XCTestCase {
         )
         
         XCTAssertEqual(testObserver.events, correctEvents)
+    }
+    
+    func test_onlyShowTrailerFromYoutube() {
+        let vm = DetailViewModel(service: MockMovieService())
+        
+        vm.movieId.onNext(1234)
+        
+        for trailer in vm.trailerList.value {
+            XCTAssertEqual(trailer.model.site, "YouTube")
+        }
     }
 
 }
