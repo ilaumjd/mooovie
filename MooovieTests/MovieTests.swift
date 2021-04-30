@@ -14,11 +14,12 @@ import RxTest
 
 class MovieTests: XCTestCase {
     
-    private let disposeBag = DisposeBag()
+    
 
     func test_selectCategory() {
         let scheduler = TestScheduler(initialClock: 0)
         let testObserver = scheduler.createObserver(String.self)
+        let disposeBag = DisposeBag()
         
         let vm = ListViewModel(service: MockMovieService())
         
@@ -41,6 +42,14 @@ class MovieTests: XCTestCase {
         )
         
         XCTAssertEqual(testObserver.events, correctEvents)
+    }
+    
+    func test_assignMovie() {
+        let vm = DetailViewModel(service: MockMovieService())
+        
+        XCTAssertNil(vm.movie.value)
+        vm.movieId.onNext(1234)
+        XCTAssertNotNil(vm.movie.value)
     }
     
     func test_onlyShowTrailerFromYoutube() {
