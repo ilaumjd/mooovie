@@ -24,8 +24,9 @@ class ListViewModel {
     
     func setupRx() {
         category
+            .map { $0.key }
             .subscribe(onNext: { [weak self] category in
-                self?.fetchList(category: category.key)
+                self?.fetchList(category: category)
             }).disposed(by: disposeBag)
     }
     
