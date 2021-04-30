@@ -1,0 +1,6 @@
+framework module Pods_MooovieTests {
+  umbrella header "Pods-MooovieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

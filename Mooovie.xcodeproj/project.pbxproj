@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156A4F96192A10DA9D43F37D /* Pods_MooovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50901213765C7EF793AA161A /* Pods_MooovieTests.framework */; };
 		D9B58A60263948D10028BCB3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A5E263948D10028BCB3 /* Model.xcdatamodeld */; };
 		D9B58A6426394B5F0028BCB3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A6326394B5F0028BCB3 /* CoreDataManager.swift */; };
 		D9B58A682639502E0028BCB3 /* ListBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A672639502E0028BCB3 /* ListBookmarkViewController.swift */; };
@@ -16,6 +17,7 @@
 		D9B58A78263959260028BCB3 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A77263959260028BCB3 /* BookmarkViewModel.swift */; };
 		D9B58A8E263A69210028BCB3 /* BookmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A8D263A69210028BCB3 /* BookmarkTests.swift */; };
 		D9B58A94263A695F0028BCB3 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B58A93263A695F0028BCB3 /* MovieTests.swift */; };
+		D9BE73D0263B01F0008E77EE /* MockMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE73CF263B01F0008E77EE /* MockMovieService.swift */; };
 		D9D4DF982621C0F500CD82CB /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF972621C0F500CD82CB /* GradientUtils.swift */; };
 		D9D4DFA0262203DC00CD82CB /* MooovieNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */; };
 		D9D4DFB72622655400CD82CB /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4DFB62622655400CD82CB /* Trailer.swift */; };
@@ -45,7 +47,7 @@
 		D9D6C928261F629100B4D4ED /* DetailViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C927261F629100B4D4ED /* DetailViewController+UI.swift */; };
 		D9D6C92B261F629B00B4D4ED /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C92A261F629B00B4D4ED /* DetailViewModel.swift */; };
 		D9D6C92E261FDF5800B4D4ED /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C92D261FDF5800B4D4ED /* UIView+Ext.swift */; };
-		E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */; };
+		F8B4866DF6C8487A5E2F8780 /* Pods_Mooovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CDBCAC1D7494B97C92C179 /* Pods_Mooovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +61,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.debug.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.debug.xcconfig"; sourceTree = "<group>"; };
-		AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.release.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.release.xcconfig"; sourceTree = "<group>"; };
+		50901213765C7EF793AA161A /* Pods_MooovieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooovieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65277169B4289A0F1E6EE517 /* Pods-Mooovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.release.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.release.xcconfig"; sourceTree = "<group>"; };
+		6B766F239DEF8561EBBF4CF1 /* Pods-MooovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooovieTests.release.xcconfig"; path = "Target Support Files/Pods-MooovieTests/Pods-MooovieTests.release.xcconfig"; sourceTree = "<group>"; };
+		A03B982D59E6E5DF262FA3E2 /* Pods-MooovieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooovieTests.debug.xcconfig"; path = "Target Support Files/Pods-MooovieTests/Pods-MooovieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3CDBCAC1D7494B97C92C179 /* Pods_Mooovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBE235A959352055150B43BF /* Pods-Mooovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooovie.debug.xcconfig"; path = "Target Support Files/Pods-Mooovie/Pods-Mooovie.debug.xcconfig"; sourceTree = "<group>"; };
 		D9B58A5F263948D10028BCB3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D9B58A6326394B5F0028BCB3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D9B58A672639502E0028BCB3 /* ListBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBookmarkViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 		D9B58A85263A64B50028BCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B58A8D263A69210028BCB3 /* BookmarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTests.swift; sourceTree = "<group>"; };
 		D9B58A93263A695F0028BCB3 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
+		D9BE73CF263B01F0008E77EE /* MockMovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMovieService.swift; sourceTree = "<group>"; };
 		D9D4DF972621C0F500CD82CB /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		D9D4DF9F262203DC00CD82CB /* MooovieNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooovieNavigationController.swift; sourceTree = "<group>"; };
 		D9D4DFB62622655400CD82CB /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156A4F96192A10DA9D43F37D /* Pods_MooovieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,26 +125,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67D180F0D100C32E230F521 /* Pods_Mooovie.framework in Frameworks */,
+				F8B4866DF6C8487A5E2F8780 /* Pods_Mooovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19538BDF1B66EB9AD6049CD4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1625B75D8E5245735A109C1C /* Pods_Mooovie.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5FC7E20E4A0DE75A9CA00DFE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */,
-				AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */,
+				BBE235A959352055150B43BF /* Pods-Mooovie.debug.xcconfig */,
+				65277169B4289A0F1E6EE517 /* Pods-Mooovie.release.xcconfig */,
+				A03B982D59E6E5DF262FA3E2 /* Pods-MooovieTests.debug.xcconfig */,
+				6B766F239DEF8561EBBF4CF1 /* Pods-MooovieTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -165,11 +166,20 @@
 		D9B58A82263A64B50028BCB3 /* MooovieTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9BE73CE263B01F0008E77EE /* Mocks */,
 				D9B58A85263A64B50028BCB3 /* Info.plist */,
 				D9B58A8D263A69210028BCB3 /* BookmarkTests.swift */,
 				D9B58A93263A695F0028BCB3 /* MovieTests.swift */,
 			);
 			path = MooovieTests;
+			sourceTree = "<group>";
+		};
+		D9BE73CE263B01F0008E77EE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D9BE73CF263B01F0008E77EE /* MockMovieService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		D9D4DF962621C0E700CD82CB /* Utils */ = {
@@ -195,7 +205,7 @@
 				D9B58A82263A64B50028BCB3 /* MooovieTests */,
 				D9D6C8C7261E86FB00B4D4ED /* Products */,
 				5FC7E20E4A0DE75A9CA00DFE /* Pods */,
-				19538BDF1B66EB9AD6049CD4 /* Frameworks */,
+				EC55DE252E8E1CA6D91CB3C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,6 +306,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		EC55DE252E8E1CA6D91CB3C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3CDBCAC1D7494B97C92C179 /* Pods_Mooovie.framework */,
+				50901213765C7EF793AA161A /* Pods_MooovieTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,9 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9B58A8A263A64B50028BCB3 /* Build configuration list for PBXNativeTarget "MooovieTests" */;
 			buildPhases = (
+				E975D5E67542C92A76C8E161 /* [CP] Check Pods Manifest.lock */,
 				D9B58A7D263A64B50028BCB3 /* Sources */,
 				D9B58A7E263A64B50028BCB3 /* Frameworks */,
 				D9B58A7F263A64B50028BCB3 /* Resources */,
+				E9C41251E00614391D609942 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,11 +342,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9D6C8DA261E86FF00B4D4ED /* Build configuration list for PBXNativeTarget "Mooovie" */;
 			buildPhases = (
-				34277E9C3239687F28E5FD83 /* [CP] Check Pods Manifest.lock */,
+				634DA39F7DD90019514BD678 /* [CP] Check Pods Manifest.lock */,
 				D9D6C8C2261E86FB00B4D4ED /* Sources */,
 				D9D6C8C3261E86FB00B4D4ED /* Frameworks */,
 				D9D6C8C4261E86FB00B4D4ED /* Resources */,
-				DEEE41A8EB4E3AE473992925 /* [CP] Embed Pods Frameworks */,
+				87E5B30E62151A8830D9FB64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,7 +414,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34277E9C3239687F28E5FD83 /* [CP] Check Pods Manifest.lock */ = {
+		634DA39F7DD90019514BD678 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,7 +436,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEEE41A8EB4E3AE473992925 /* [CP] Embed Pods Frameworks */ = {
+		87E5B30E62151A8830D9FB64 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,6 +453,45 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mooovie/Pods-Mooovie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E975D5E67542C92A76C8E161 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MooovieTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C41251E00614391D609942 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MooovieTests/Pods-MooovieTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MooovieTests/Pods-MooovieTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MooovieTests/Pods-MooovieTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -440,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B58A94263A695F0028BCB3 /* MovieTests.swift in Sources */,
+				D9BE73D0263B01F0008E77EE /* MockMovieService.swift in Sources */,
 				D9B58A8E263A69210028BCB3 /* BookmarkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +570,7 @@
 /* Begin XCBuildConfiguration section */
 		D9B58A88263A64B50028BCB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A03B982D59E6E5DF262FA3E2 /* Pods-MooovieTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +592,7 @@
 		};
 		D9B58A89263A64B50028BCB3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B766F239DEF8561EBBF4CF1 /* Pods-MooovieTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -667,7 +730,7 @@
 		};
 		D9D6C8DB261E86FF00B4D4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C2EBCE12200563F6789DB66 /* Pods-Mooovie.debug.xcconfig */;
+			baseConfigurationReference = BBE235A959352055150B43BF /* Pods-Mooovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -687,7 +750,7 @@
 		};
 		D9D6C8DC261E86FF00B4D4ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD264E5D7D82B90D8266813C /* Pods-Mooovie.release.xcconfig */;
+			baseConfigurationReference = 65277169B4289A0F1E6EE517 /* Pods-Mooovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
